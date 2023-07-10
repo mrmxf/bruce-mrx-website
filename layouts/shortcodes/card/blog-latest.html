@@ -1,0 +1,64 @@
+{{/*
+    Shortcode to create a latest blog card with the featured media on the RIGHT.
+    wordcoutn assumes 220 words/minute
+*/}}
+{{ $title  := "None"       }}
+{{ $url     := ""          }}
+{{ $urltgt  := ""          }}
+{{ $media   := ""          }}
+{{ $summary := ""          }}
+{{ $link    := ""          }}
+{{ $duration := ""         }}
+{{ range first 3 ( where .Site.Pages "Type" "blog"  ) | last 1                }}
+  {{ $url      = .RelPermalink                                                 }}
+  {{ $urltgt   = "_self"                                                       }}
+  {{ $title    = .LinkTitle                                                    }}
+  {{ $featured  := (.Resources.ByType "image").GetMatch "*featured*"           }}
+  {{ $media    = $featured.RelPermalink                                        }}
+  {{ $summary  = .Plain | safeHTML | truncate 300                              }}
+  {{ $minutes := add ( div ( countwords  .Plain ) 220 ) 1                      }}
+  {{ $duration = printf "~%v min read" $minutes                                }}
+  {{  $link    = .RelPermalink                                                 }}
+{{end                                                                         }}
+{{ $ext       := path.Ext $media                                              }}
+{{ $mediaIs   := cond (eq $ext ".mp4") "video" "image"                        }}
+<a href="blog-link-{{ .Ordinal }}"></a>
+<div class="td-box--{{ .Ordinal }}" style="margin-left:-15px;margin-right:-15px;">
+  <section class="container">
+    <div class="ui stackable two column reversed grid">
+      <div class="row">
+
+        <div class="thirteen wide column">
+          <div class="ui fluid card">
+            <div class="content">
+              <div class="header"><a href="{{ $link }}">{{ $title }}</a></div>
+              <div class="meta">
+                <span class="category"></span>{{ $duration }}</span>
+              </div>
+              <div class="description">
+                {{ $summary }}
+                <a href="{{ $link }}" aria-label="{{ T "ui_read_more"}} - {{ $title }}">{{ T "ui_read_more"}}</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{{ with $media }}
+        <div class="three wide column">
+          {{ if eq $mediaIs "video"}}
+          <video class="ui image" autoplay loop>
+            <source src="{{ $media }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="mt-2 mt-md-0"><small class="text-muted">{{ . | html }}</small></figcaption>
+          {{ else}}
+          <a href="{{ $link }}"><img class="ui image" src="{{ $media }}" /></a>
+          {{end}}
+        </div>
+{{ end }}
+
+
+      </div>
+    </div>
+  </section>
+</div>

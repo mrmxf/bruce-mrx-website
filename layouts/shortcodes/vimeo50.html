@@ -1,0 +1,35 @@
+{{/*
+Shortcode to put the latest video on the left and content on the right.
+
+Usage:
+{{< vimeo50>}}
+  stuff
+  {{< /vimeo50>}}
+    */}}
+    {{ $col_id := .Get "color" | default .Ordinal }}
+
+    <a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
+    <section id="vimeo50" class="td-box td-box--{{ $col_id }} ">
+      <div class="container">
+
+        <div class="row">
+          <div class="col p-6">
+            <!--
+            <iframe src="https://player.vimeo.com/video/817933241?h=f9146636bd&autoplay=1&loop=1&quality=540p&responsive=1"
+              style="width:80%;min-height:400px;" title="Rexy enjoying the Vegas Sun" frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              -->
+              <video width="100%" autoplay loop>
+                <source src="/meeja/mrx-rexy-nab-2023.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video> 
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="container ">
+            {{ .Inner | markdownify }}
+          </div>
+        </div>
+
+      </div>
+    </section>

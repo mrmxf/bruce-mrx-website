@@ -1,0 +1,3 @@
+{{ range ( where .Site.RegularPages "Type" "posts" | first 1 ) }}
+  {{ .LinkTitle }}
+{{end}}

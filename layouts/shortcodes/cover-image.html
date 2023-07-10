@@ -1,0 +1,71 @@
+{{/*
+  Shortcode to render a full cover page as HTML (use angle brackets)
+
+  Usage:
+      {{< cover-image
+        title=        "thePageTitle"
+        imageUrl=     "/img/some/online/file.svg"
+        logoPath=     "static/img/some/content.png" 
+        height=       "full"
+        color=        "dark"
+        scrollTo=     "#td-block-1"
+        btn1=         "Project"
+        url1=         "/docs"
+        btn2=         "Technology"
+        url2=         "/docs/technology"
+        blogbtn=      "yes"
+    >}}
+    ## Some Heading text to display
+    {{< /cover-image >}}
+*/}}
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $blockID := printf "td-cover-block-%d" .Ordinal }}
+{{ $backgroundImage := .Get "imageUrl" }}
+{{ $logoPng := resources.Get "logoPath" }}
+{{ $col_id := .Get "color" | default "dark" }}
+{{ $logo_anchor := .Get "logo_anchor" | default "smart" }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
+{{ $height := .Get "height" | default "max" }}
+{{ $byline := .Get "byline" | default "" }}
+{{ $scrollTo := .Get "scrollTo" }}
+
+<style>
+  #td-cover-block-0 {
+    background-image: url("{{ $backgroundImage }}");
+    object-fit: cover;
+  }
+</style>
+
+<section id="{{ $blockID }}" class="row td-cover-block td-cover-block--height-{{ $height }}{{ if not .Site.Params.ui.navbar_translucent_over_cover_disable }} js-td-cover{{ end }} td-overlay td-overlay--dark-bg-{{ $col_id }}">
+  <div class="container td-overlay__inner">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          {{ with .Get "title" }}<h1 class="display-1 mt-0 mt-md-5 pb-4">{{ $title := . }}{{ with $logoPng }}{{ $logoPng_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-cover-logo" src="{{ $logoPng_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
+          {{ with .Get "subtitle" }}<p class="display-2 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
+          <div class="pt-3 lead">
+            {{ if eq .Page.File.Ext "md" }}
+              <div class="mx-auto">
+                {{ partial "btn-jump" (dict "txt" (.Get "btn")  "url" (.Get "url")  ) }}
+                {{ partial "btn-jump" (dict "txt" (.Get "btn1") "url" (.Get "url1") ) }}
+                {{ partial "btn-jump" (dict "txt" (.Get "btn2") "url" (.Get "url2") ) }}
+                {{ partial "btn-jump" (dict "txt" (.Get "btn3") "url" (.Get "url3") ) }}
+                {{ partial "btn-jump" (dict "txt" (.Get "btn4") "url" (.Get "url4") ) }}
+                {{ if (.Get "blogbtn") }}<br />{{ partial "btn-blog" . }}{{end}}
+                {{ .Inner | markdownify }}
+                {{ partial "btn-scroll" (dict "url" $scrollTo "color" "darkgreen") }}
+              </div>
+            {{ else }}
+                {{ .Inner | htmlUnescape | safeHTML }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ if $byline }}
+  <div class="byline">
+    <small>{{ $byline }}</small>
+  </div>
+  {{ end }}
+</section>

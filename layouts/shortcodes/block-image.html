@@ -1,0 +1,34 @@
+{{/*
+  Render the HTML for a paragraph block with a floating image and render Inner
+  text as Markdown.
+
+  Usage  [optional-params]: 
+      {{< block-image
+        alt=        "some text for accessibility"
+        [position]= "left  | center | right" 
+        [size]=     "tiny  |small | medium | large"
+        imageUrl=   "/some/path/to/online/image"
+        [linkUrl]=  "/some/path/to/a/page"
+      >}}
+*/}}
+{{ $alt :=      .Get "alt"                                                    }}
+{{/* -----look up size in a map - if unset use a default       -----        */}}
+{{ $sizeMap :=  dict "tiny" 10 "small" 20 "medium" 33 "large" 50 "full" 100   }}
+{{ $sz :=       index $sizeMap (.Get "size") | default 20                     }}
+{{/* ----- look up position in a map - if unset use a default   -----       */}}
+{{ $posMap :=  dict "left" "left" "center" "center"  "right" "right"          }}
+{{ $pos :=       index $posMap (.Get "position") | default "left"             }}
+{{ $imgUrl :=   .Get "imageUrl"                                               }}
+{{ $lnkUrl :=   .Get "linkUrl"                                                }}
+{{ $position := .Get "position"                                               }}
+<div>
+    {{ if $lnkUrl }}
+      {{ $tgt := "_self" }}
+      {{ if eq (substr $lnkUrl 0 4) "http" }} {{ $tgt = "_blank" }} {{ end }}
+    <a href="{{$lnkUrl}}" target="{{$tgt}}">
+    {{end}}
+    <img src="{{$imgUrl}}" class="img-thumbnail float-{{$pos}} mr-2" style="width:{{$sz}}%;" alt="$alt">
+    {{ if $lnkUrl }}</a>{{end}}
+  {{ .Inner | markdownify }}
+  <span style='content:"";clear:both;display:table;'></span>
+</div>

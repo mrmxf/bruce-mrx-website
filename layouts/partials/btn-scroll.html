@@ -1,0 +1,19 @@
+{{/*
+  
+  A partial to display a consistent page scroll button. If the button URL is
+  missing then nothing will be rendered. If the url starts with HTTP then the
+  link will open in a new window.
+
+    Usage:
+      {{ partial btn-scroll (dict "url" "ButtonUrl" "color" "darkgreen") }}
+
+*/}}
+{{ if .url }}
+  {{ $color  := .color | default "darkblue" }}
+  {{ $scheme := substr .url 0 4 }}
+  {{ $urltgt := "_self" }}
+  {{ if eq $scheme "http" }}{{ $urltgt = "_blank" }}{{ end }}
+    <div>
+      <a class="btn btn-link text-green" href="{{ .url }}" aria-label="{{ T "ui_read_more"}}"><i class="fa fa-chevron-circle-down text-green" style="font-size: 400%;color:{{ $color }};"></i></a>
+    </div>
+{{ end }}

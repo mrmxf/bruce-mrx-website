@@ -1,0 +1,17 @@
+{{/*
+  
+  A partial to display a consistent recent blog post button. If the button URL
+  is missing then nothing will be rendered. If the url starts with HTTP then the
+  link will open in a new window.
+
+    Usage:
+      {{ partial btn-blog . }}
+
+*/}}
+{{ range ( where .Site.Pages "Type" "blog"  ) | first 3 | last 1              }}
+  {{ $url    := .RelPermalink                                                 }}
+  {{ $urltgt := "_self"                                                       }}
+  {{ $txt    := .LinkTitle                                                    }}
+  <a class="btn btn-lg btn-primary mr-3 mb-4" href="{{ $url }}" target="{{ $urltgt  }}">{{ $txt }}<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+{{end                                                                         }}
+

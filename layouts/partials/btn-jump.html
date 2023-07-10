@@ -1,0 +1,16 @@
+{{/*
+  
+  A partial to display a consistent jump button. If the button URL is missing
+  then nothing will be rendered. If the url starts with HTTP then the link will
+  open in a new window.
+
+    Usage:
+      {{ partial btn-jump (dict "txt" "ButtonText" "url" "ButtonUrl") }}
+
+*/}}
+{{ if .url }}
+  {{ $scheme := substr .url 0 4 }}
+  {{ $urltgt := "_self" }}
+  {{ if eq $scheme "http" }}{{ $urltgt = "_blank" }}{{ end }}
+      <a class="btn btn-lg btn-primary mr-3 mb-4" href="{{ .url }}" target="{{ $urltgt  }}">{{ .txt }}<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+{{ end }}

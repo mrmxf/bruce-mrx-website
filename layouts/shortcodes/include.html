@@ -1,0 +1,13 @@
+{{/*
+
+  Include another page and render the HTML with the current template (not the
+  original template). File path is relative to project root
+
+  e.g.
+    {{< include        "content/docs/backers.md" >}}
+    {{< include file = "content/docs/backers.md" >}}
+
+*/}}
+{{ $f := .Get 0 }}
+{{ if not $f }}{{ $f := .Get "file" }}{{ end }}
+{{ with .Site.GetPage $f }}{{.Content}}{{end}}

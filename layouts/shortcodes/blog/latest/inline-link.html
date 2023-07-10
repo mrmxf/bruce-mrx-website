@@ -1,0 +1,14 @@
+{{/*
+  Shortcode to render an inline link to the latest blog post
+
+  Usage:
+      {{% blog/latest/inline-link %}}
+*/}}
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ range first 3 ( where .Site.Pages "Type" "blog"  ) | last 1              }}
+  {{ $url    := .RelPermalink                                                 }}
+  {{ $urltgt := "_self"                                                       }}
+  {{ $txt    := .LinkTitle                                                    }}
+  <span class="ui right pointing red basic label">blog</span>
+  <a href="{{ $url }}" target="{{ $urltgt  }}">{{ $txt }}</a>
+{{end                                                                         }}
