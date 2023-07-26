@@ -1,15 +1,12 @@
 ---
-title:       MRX.123.456.789.def
-linkTitle:   MRX.123.456.789.def
-url:         /reg/MRX.123.456.789.def
+title:       MRX.123.456.789.ghi
+linkTitle:   MRX.123.456.789.ghi
+url:         /ui/reg/MRX.123.456.789.ghi
 description: Sample registration for rexy_sunbathe_mrx.mxf
 ---
-# MRX.123.456.789.def - ALPHA release candidate
+# MRX.123.456.789.ghi
 
-## frame by frame csv data of Rexy's sunbathing scene
-
-**Congratulations**. This is a sample url that defines the content of the
-`rexy_sunbathe_mrx.mxf` file.
+## clocked JSON text of the camera location for Rexy's sunbathing scene
 
 This is work in progress and there may be issues with the rexy file as well as
 with the associated identifiers during the engineering stages.
@@ -20,10 +17,10 @@ of the JSON for this sample, then take a look at the GitHub repo for this page.
 ```json
 BEGIN-METAREX-JSON
 {
-    "metarexId":     "MRX.123.456.789.def",
-    "type":          "frame by frame csv data of Rexy's sunbathing scene",
-    "payloadFormat": "text/csv",
-    "specification": "https://docs.unrealengine.com/4.27/en-US/TestingAndOptimization/PerformanceAndProfiling/CSVProfiler/",
+    "metarexId":     "MRX.123.456.789.ghi",
+    "type":          "clocked JSON text of the camera location for Rexy's sunbathing scene",
+    "payloadFormat": "application/json",
+    "specification": "https://docs.unrealengine.com/4.27/en-US/API/Runtime/Engine/Camera/UCameraComponent//",
     "services": {}
 }
 END-METAREX-JSON

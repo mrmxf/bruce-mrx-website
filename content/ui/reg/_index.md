@@ -1,6 +1,6 @@
 ---
 title:     "Register"
-linkTitle: "/reg/"
+linkTitle: "/ui/reg/"
 weight: 80
 menu:
   main:
@@ -9,9 +9,11 @@ menu:
 # Metarex Register
 
 * Query a value
-   * e.g. [`/reg/MRX.123.456.789.abc`](/reg/MRX.123.456.789.abc)
+   * e.g. [/ui/reg/MRX.123.456.789.abc](/ui/reg/MRX.123.456.789.abc)
+   * e.g. [/ui/reg/MRX.123.456.789.ghi](/ui/reg/MRX.123.456.789.ghi) {_[raw](/reg/MRX.123.456.789.ghi.json)_}
+   * e.g. [/ui/reg/MRX.123.456.789.jkl](/ui/reg/MRX.123.456.789.jkl) {_[raw](/reg/MRX.123.456.789.jkl.json)_}
 * Generate an error
-   * e.g. [`/reg/06da8618-925d-4238-a89d-84bc070df937`](/reg/06da8618-925d-4238-a89d-84bc070df937)
+   * e.g. `[/ui/reg/06da8618-925d-4238-a89d-84bc070df937](/ui/reg/06da8618-925d-4238-a89d-84bc070df937)`
 
 {{< block-image
     alt=      "mxf-live demo at ARRI"

@@ -1,7 +1,7 @@
 ---
 title:       MRX.123.456.789.abc
 linkTitle:   MRX.123.456.789.abc
-url:         /reg/MRX.123.456.789.abc
+url:         /ui/reg/MRX.123.456.789.abc
 description: Sample registration for comment
 ---
 # MRX.123.456.789.abc

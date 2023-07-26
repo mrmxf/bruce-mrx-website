@@ -28,7 +28,7 @@ linkTitle: Metarex
   just want to see how Rexy evolves once the sun-tan is done.
 * [Download](/downloads/samples/rexy_sunbathe_mrx.zip) a sample metarex file for
   Rexy's sunbathing scene. It has some issues that are being worked on. The
-  [registration information](/reg/MRX.123.456.789.def) is in the register and
+  [registration information](/ui/reg/MRX.123.456.789.def) is in the register and
   the [high level documentation]() in online.
 
 {{< /card/media >}}
