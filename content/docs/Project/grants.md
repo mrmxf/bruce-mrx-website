@@ -10,4 +10,4 @@ description: How the grants work?
 TBC - we are taking advice on the initial grant framework.
 {{% /pageinfo %}}
 
-
+Grants will be available when we have sufficient funds. Fund raising continues.

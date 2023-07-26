@@ -6,14 +6,14 @@ weight:      10
 description: What is the MetaRex.media project? Where did it come from? What will it deliver?
 
 categories:  ["Project"]
-tags:        ["docs", "project"] 
+tags:        ["docs", "project"]
 ---
 
-{{% pageinfo %}}
-**metarex.media** uses **[MXF](https://mrmxf.com/mxf)** and
-**[OpenTimelineIO](https://opentimelineio.readthedocs.io)** to preserve the
-original format of metadata for live, downstream & archival use.
-{{% /pageinfo %}}
+{{< f/card-centered
+    src= "/img/dino/mrx-logo-0100.png"
+    imgClass="small"
+    header="metarex.media"
+    meta="is like a zip file with a timeline. It's used like an electronic FedEx service."  />}}
 
 **Status**: [view timeline](/docs/project/status).
 **IBC Accelerator 2023** [Responsive Narrative Factory](/docs/ibc2023).
@@ -36,7 +36,7 @@ That's the problem that {{% metarex %}} solves
 
 1. Map the `mrx` container into networks so that destination addresses work.
 2. Define a database (register) of manifests so that you know what's in the
-   `mrx` container.  
+   `mrx` container.
 
 An added bonus is that the `mrx` register can publish cloud endpoints to manage
 the metadata - this can lead to **no code integrations**. That should be nice!
@@ -51,7 +51,7 @@ systems.
 
 Because today, every Virtual Set and engineering heavy production is a custom
 build. Every QC report is unlinked to the master content and version workflows
-lose metadata when content is processed by third parties. 
+lose metadata when content is processed by third parties.
 
 * **What is it good for?** Carrying binary, text, isochronous and event driven
   metadata. Identifying the metadata via a registry and providing links to
@@ -81,7 +81,7 @@ a first class citizen. The biggest issue was "_The metadata gets lost_".
 
 {{< block-image
     alt=      "mxf-live demo at ARRI"
-    position= "left" 
+    position= "left"
     size=     "small"
     imageUrl= "/blog/2019/07/20/mxf-live-at-arri-international-broadcast-day-2019/international-broadcast-day-2019-demo.jpg"
     linkUrl=  "/blog/2019/07/20/mxf-live-at-arri-international-broadcast-day-2019/"

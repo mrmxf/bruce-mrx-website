@@ -1,0 +1,24 @@
+{{/* fomantic-ui card-centerred
+
+    Usage:
+    {{% card-horizontal
+        description="Body Text or omitted"
+        src="image/url/or/omitted"
+        imgClass="mini | small | medium etc"
+        header="Header in bold or ommitted"
+        meta="Meta below heading or ommitted"
+    %}}
+*/}}
+{{ $src := .Get "src"                                                         }}
+{{ $class := "ui raised centered card"                                }}
+<div class="{{ $class }}">
+{{ if .Get "src"                                                              }}
+    <div class="content">
+{{ $imgClass := .Get "imgClass" }}<div class=""image><img class="{{ $imgClass }} ui image" src="{{ $src }}"/></div>{{ end }}
+{{ if .Get "header" }}<div class="header">{{ .Get "header" | markdownify }}</div>{{ end     }}
+{{ if .Get "meta" }}<div class="meta"><span class="category">{{ .Get "meta" | markdownify }}</span></div>{{ end }}
+{{ if  or ( .Get "description" ) (.Inner)                                       }}
+<div class="description">{{- .Get "description" -}}{{- .Inner | markdownify -}}</div>
+{{ end                                                                        }}
+    </div>
+  </div>

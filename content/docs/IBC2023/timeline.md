@@ -21,7 +21,7 @@ gantt
     axisFormat    %Y-%m
     %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
     todayMarker stroke-width:5px,stroke:#0f0,opacity:0.3
-                                                                                                                        
+
     section Week Countdown
     w14                     : done, w14,  2023-06-05, 1w
     w13                     : done, w13,  2023-06-12, 1w
@@ -54,10 +54,10 @@ gantt
     infuse components       :        comp, after tagBL , 4w
     integration             : crit,  intg, after comp, 3w
     testing                 : crit,  test, after comp, 6w
-    
+
 
     section Marketing
     IBC promotion          :mkt, 2023-07-17, 2023-09-14
 ```
 
-[contact]: /contact/
+{{% site-links %}}

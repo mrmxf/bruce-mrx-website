@@ -1,0 +1,32 @@
+{{/*    fomantic shortcode:  caption
+
+  put a caption (h6) inline. if group is specified then text & icon are generated
+
+  Usage:
+    {{% d/caption  "Some text"  "table | figure"
+
+    {{% d/caption
+         caption  = "Some text"
+         group    = "table" | "figure"
+    %}}
+
+    examples
+      {{% d/caption "table of values" "table"  %}}
+*/}}
+{{ $icon :=  ""                                                               }}
+{{ $caption := .Get 0                                                         }}
+{{ $group   := .Get 1
+                                                                              }}
+{{ if .IsNamedParams                                                          }}
+{{   $caption :=  .Get "caption" | default "Missing Caption"                  }}
+{{   $group   :=  .Get "group"                                                }}
+{{ end
+                                                                              }}
+<h6 class="ui blue center aligned header">
+{{ if eq $group "table"                                                        }}
+<i class="table icon"></i> Table: {{ $caption }}</h6>
+{{ else if eq $group "figure"                                                  }}
+<i class="file image outline icon"></i> Figure: {{ $caption }}</h6>
+{{ else                                                                       }}
+{{ $caption }}</h6>
+{{end                                                                         }}

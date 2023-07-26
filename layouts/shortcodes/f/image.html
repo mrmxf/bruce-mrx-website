@@ -1,5 +1,5 @@
 {{/*    fomantic shortcode:  image
-  
+
   use without parmaeter names to manually specify classes or use the helpers.
 
   Usage:
@@ -17,12 +17,13 @@
 */}}
 {{ if .Get 0                                                                  }}
 <img class="{{.Get 1}}" src="{{.Get 0}}" />
-{{  end                                                                       }}
-{{  $class        := .Get "class"                                             }}
-{{  $mediaUrl     := .Get "src"                                               }}
-{{  $alt          := .Get "alt"                                               }}
-{{  $caption      := .Get "caption"   | default  ""                          }}
+{{ else                                                                       }}
+{{   $class        := .Get "class"                                             }}
+{{   $mediaUrl     := .Get "src"                                               }}
+{{   $alt          := .Get "alt"                                               }}
+{{   $caption      := .Get "caption"   | default  ""                           }}
 <img class="{{$class}}" src="{{$mediaUrl}}" alt={{$alt}} />
-{{ if $caption                                                                }}
+{{   if $caption                                                                }}
 <div class="text-center">{{$caption}}</div>
-{{ end  }}
+{{   end  }}
+{{  end                                                                       }}

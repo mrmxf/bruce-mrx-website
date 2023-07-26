@@ -1,6 +1,6 @@
 ---
-title:       MRX container
-linkTitle:   MRX container
+title:       Specifications
+linkTitle:   Specifications
 weight:      30
 description: How does metarex.media work under the hood?
 ---

@@ -40,10 +40,11 @@ services:
 languages:
   en:
     title: metarex.media
-    description: Metadata Resource Express
     languageName: English
     # Weight used for sorting.
     weight: 1
+    params:
+      description: Metadata Resource Express
 
 markup:
   goldmark:
@@ -93,7 +94,7 @@ params:
     taxonomyPageHeader:
       - tags
       - categories
-  
+
   # Highlighting config
   pygmentsCodeFences: true
   pygmentsUseClasses: false
@@ -110,13 +111,13 @@ params:
   # This menu appears only if you have at least one [params.versions] set.
   version_menu: Phase 0
 
-  # Flag used in the "version-banner" partial to decide whether to display a 
+  # Flag used in the "version-banner" partial to decide whether to display a
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
   archived_version: false
 
   # The version number for the version of the docs represented in this doc set.
-  # Used in the "version-banner" partial to display a version number for the 
+  # Used in the "version-banner" partial to display a version number for the
   # current doc set.
   version: 0.0
 
@@ -174,7 +175,7 @@ params:
       no: "Sorry to hear that. Please <a href='https://github.com/metarex/website/issues/new'>tell us how we can improve</a>."
 
     # Adds a reading time to the top of each doc.
-    # If you want this feature, but occasionally need to remove the Reading time from a single page, 
+    # If you want this feature, but occasionally need to remove the Reading time from a single page,
     # add "hide_readingtime: true" to the page's front matter
     readingtime:
       enable: false
@@ -190,7 +191,7 @@ params:
         url: https://discord.gg/uBxZXYZARw
         icon: "fab fa-discord"
         desc: "Join #metarex.media on Discord to give us your thoughts!"
-        
+
   #   - name: "Stack Overflow"
   #     url: "https://example.org/stack"
   #     icon: "fab fa-stack-overflow"
@@ -230,4 +231,4 @@ module:
     - path: github.com/google/docsy
       disable: false
     - path: github.com/google/docsy/dependencies
-      disable: false    
+      disable: false
