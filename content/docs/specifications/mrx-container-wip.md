@@ -12,6 +12,8 @@ notes: >
   approve a set of changes for release.
 
 ---
+<!-- markdownlint-disable MD025 -->
+
 # <mark>SPECIFICATION</mark>
 
 ## Version 0.3.0
