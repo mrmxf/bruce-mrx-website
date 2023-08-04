@@ -1,0 +1,14 @@
+{{/*
+eg>> partial 'f/image' (dict "src" $sourceUrl "alt" $caption "url" $url "class" $class "cap" $nonZeroToShowCaption)
+*/}}
+{{- $p := "f/image" -}}
+{{- $m := printf "missing %s" .src -}}
+{{- if not .src -}}{{- partial "sys/errArg" (dict "p" $p "a" ".src" "m" $m ) -}}{{- end -}}
+{{- if not .alt -}}{{- partial "sys/errArg" (dict "p" $p "a" ".alt" "m" $m ) -}}{{- end -}}
+{{- if not .class -}}{{- partial "sys/errArg" (dict "p" $p "a" ".class" "m" $m ) -}}{{- end -}}
+{{- if .url -}}<a href="{{.url}}">{{- end -}}
+<img class="{{.class}}" src="{{.src}}" alt="{{.alt}}" />
+{{- if .url -}}</a>{{- end -}}
+  {{- if and .cap .alt -}}<div class="ui  center aligned small bottom attached message">
+  {{ .alt }}
+</div>{{- end -}}

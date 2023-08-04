@@ -1,0 +1,90 @@
+{{- "<!-- partials/sidebar-tree.html -->" | safeHTML -}}
+{{/* The cache for bigger sites has not yet been migrated fromm Docsy . */}}
+{{ $sidebarCacheLimit := cond (isset .Site.Params.ui "sidebar_cache_limit") .Site.Params.ui.sidebar_cache_limit 2000 -}}
+{{ $shouldDelayActive := ge (len .Site.Pages) $sidebarCacheLimit -}}
+<div class="ui segment">
+  {{- if 0 -}}
+    {{ if not .Site.Params.ui.sidebar_search_disable -}}
+    <form class="ui form">
+      {{ partial "search-input.html" . }}
+    </form>
+    {{ else -}}
+    <div id="content-mobile">
+      <form class="ui form">
+        {{ partial "search-input.html" . }}
+        <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button"
+          data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false"
+          aria-label="Toggle section navigation">
+        </button>
+      </form>
+    </div>
+    <div id="content-desktop"></div>
+    {{ end -}}
+  {{ end -}}
+  <nav class="ui secondary vertical menu" id="td-section-nav">
+    {{/* --- translations ------------------------------------------------- */}}
+    {{ if (gt (len .Site.Home.Translations) 0) -}}
+    {{ partial "navbar-lang-selector.html" . }}
+    {{ end -}}
+    {{/* --- setup -------------------------------------------------------- */}}
+    {{ $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
+    {{ $ulNr := 0 -}}
+    {{ $ulShow := cond (isset .Site.Params.ui "ul_show") .Site.Params.ui.ul_show 1 -}}
+    {{/* --- max depth=50 -------------------------------------------------------- */}}
+    {{ $sidebarMenuTruncate := cond (isset .Site.Params.ui "sidebar_menu_truncate")
+    .Site.Params.ui.sidebar_menu_truncate 50 -}}
+    {{ template "section-tree-nav-section" (dict "page" . "section" $navRoot "shouldDelayActive" $shouldDelayActive
+    "sidebarMenuTruncate" $sidebarMenuTruncate "ulNr" $ulNr "ulShow" (add $ulShow 1)) }}
+  </nav>
+</div>
+{{ define "section-tree-nav-section" -}}
+{{ $s := .section -}}
+{{ $p := .page -}}
+{{ $shouldDelayActive := .shouldDelayActive -}}
+{{ $sidebarMenuTruncate := .sidebarMenuTruncate -}}
+{{ $treeRoot := cond (eq .ulNr 0) true false -}}
+{{ $ulNr := .ulNr -}}
+{{ $ulShow := .ulShow -}}
+{{ $active := and (not $shouldDelayActive) (eq $s $p) -}}
+{{ $activePath := and (not $shouldDelayActive) (or (eq $p $s) ($p.IsDescendant $s)) -}}
+{{ $show := cond (or (lt $ulNr $ulShow) $activePath (and (not $shouldDelayActive) (eq $s.Parent $p.Parent)) (and (not
+$shouldDelayActive) (eq $s.Parent $p)) (not $p.Site.Params.ui.sidebar_menu_compact) (and (not $shouldDelayActive)
+($p.IsDescendant $s.Parent))) true false -}}
+{{ $mid := printf "m-%s" ($s.RelPermalink | anchorize) -}}
+{{ $pages_tmp := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true -}}
+{{ $pages := $pages_tmp | first $sidebarMenuTruncate -}}
+{{ $withChild := gt (len $pages) 0 -}}
+{{ $manualLink := cond (isset $s.Params "manuallink") $s.Params.manualLink ( cond (isset $s.Params "manuallinkrelref")
+(relref $s $s.Params.manualLinkRelref) $s.RelPermalink) -}}
+{{ $manualLinkTitle := cond (isset $s.Params "manuallinktitle") $s.Params.manualLinkTitle $s.Title -}}
+<div id="{{ $mid }}-li" class="item">
+
+  <a href="{{ $manualLink }}" {{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}" {{ end }} {{ with
+    $s.Params.manualLinkTarget }} target="{{ . }}" {{ if eq . "_blank" }} rel="noopener" {{ end }} {{ end }}
+    id="{{ $mid }}">
+    {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
+    {{- if $withChild }}
+    <i class="folder icon"></i>
+    {{- else -}}
+    <i class="file icon"></i>
+    {{ end -}}
+    <div class="content">
+      <div class="header">{{ $s.LinkTitle }}</div>
+      <div class="description">some other text</div>
+    </div>
+    <span></span>
+  </a>
+
+  {{- if $withChild }}
+  {{- $ulNr := add $ulNr 1 }}
+  <ul class="ul-{{ $ulNr }}{{ if (gt $ulNr 1)}} foldable{{end}}">
+    {{ range $pages -}}
+    {{ if (not (and (eq $s $p.Site.Home) (eq .Params.toc_root true))) -}}
+    {{ template "section-tree-nav-section" (dict "page" $p "section" . "shouldDelayActive" $shouldDelayActive
+    "sidebarMenuTruncate" $sidebarMenuTruncate "ulNr" $ulNr "ulShow" $ulShow) }}
+    {{- end }}
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>
+{{- end }}

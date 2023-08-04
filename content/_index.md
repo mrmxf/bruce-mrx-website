@@ -3,10 +3,13 @@ title:     Metarex
 linkTitle: Metarex
 
 ---
-<!-- ---  Opening Card ----------------------------------------------------- -->
-{{< card/media
-      mediaUrl =  "/meeja/mrx-rexy-nab-2023.mp4"
-      mediaOn  =  "left"
+<!-- ###  Row boundary ##################################################### -->
+{{< f/row                                                                    >}}
+{{< f/cards                                                                  >}}
+
+<!-- --- card -------------------------------------------------------------  -->
+{{< f/card
+      src =  "/meeja/mrx-rexy-nab-2023.mp4"
       credit   =  ""
       title    =  "MetaRex - it's like FedEx for Metadata"
       extra    =  "this video will be available as a test pattern soon!"
@@ -31,12 +34,40 @@ linkTitle: Metarex
   [registration information](/ui/reg/MRX.123.456.789.def) is in the register and
   the [high level documentation]() in online.
 
-{{< /card/media >}}
+{{< /f/card >}}
 
-<!--  latest blog ----------------------------------------------------------  -->
+<!-- --- card -------------------------------------------------------------  -->
 
-{{< card/blog-latest >}}
+{{< f/card-blog >}}
 
+<!-- --- card -------------------------------------------------------------  -->
+
+<div class="ui card">
+  <div class="image">
+    <img src="/img/event/ibc2023-rnf-web.png">
+  </div>
+  <div class="content">
+    <a class="header">RNF</a>
+    <div class="meta">
+      <span class="date">September 2013</span>
+    </div>
+    <div class="description">
+      Come and see us at the IBC Accelerator Zone in Hall 3.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+</div>
+
+{{< /f/cards                                                                 >}}
+
+{{< /f/row                                                                   >}}
+
+<!-- ###  Row boundary ##################################################### -->
 <!--  Backer List ---------------------------------------------------------  -->
 
 {{< blocks/lead                                   >}}
@@ -45,10 +76,10 @@ linkTitle: Metarex
 
 <!--  Flow chart ----------------------------------------------------------  -->
 
-{{% blocks-lead align="text-start" %}} 
+{{% blocks-lead align="text-start" %}}
 {{< f/image
 	  src      = "/img/mrx-flow.png"
-		class    = "ui fluid image" 
+		class    = "ui fluid image"
 		caption  = "The {{% metarex %}} Flow Diagram 2023"
 >}}
 
@@ -68,27 +99,27 @@ linkTitle: Metarex
   * The end user now has access to, potentially, several variants of the metadata
     before they write their first line of code.
 
-{{% /blocks/lead %}} 
+{{% /blocks/lead %}}
 
 <!--  Goals ---------------------------------------------------------------  -->
 
-{{< blocks/lead >}} 
+{{< blocks/lead >}}
 
 {{% metarex %}} will create free Open Source software (**FOSS**) to handle media metadata.
 
 {{% metarex %}} will encourage all tool vendors to use {{% metarex %}} **FOSS** in their products.
 
 {{% metarex %}} places metadata in a standard wrapper with standard identifiers.
-  
+
 {{% metarex %}} uses proven, sample accurate timing model for live & offline.
-  
+
 {{% metarex %}} raises funds to give grants for a freely available open source
   media metadata transport framework.
-  
+
 {{% metarex %}} enables you to gather, transport, identify and use metadata from
   many sources in workflows.
 
-{{< /blocks/lead >}} 
+{{< /blocks/lead >}}
 
 <!--  Videos --------------------------------------------------------------  -->
 

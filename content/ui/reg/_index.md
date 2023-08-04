@@ -8,7 +8,7 @@ menu:
 ---
 # Metarex Register
 
-* Query a value
+* Query a value from the
    * e.g. [/ui/reg/MRX.123.456.789.abc](/ui/reg/MRX.123.456.789.abc)
    * e.g. [/ui/reg/MRX.123.456.789.ghi](/ui/reg/MRX.123.456.789.ghi) {_[raw](/reg/MRX.123.456.789.ghi.json)_}
    * e.g. [/ui/reg/MRX.123.456.789.jkl](/ui/reg/MRX.123.456.789.jkl) {_[raw](/reg/MRX.123.456.789.jkl.json)_}
@@ -17,7 +17,7 @@ menu:
 
 {{< block-image
     alt=      "mxf-live demo at ARRI"
-    position= "left" 
+    position= "left"
     size=     "medium"
     imageUrl= "/img/dino/mrx-truck-qr-reg.png"
 >}}
@@ -30,6 +30,6 @@ host for the register that is able to keep costs free or low, yet provide a
 resilient service with high performance. [Contact](/contact) us if you think you
 can fulfil this role.
 
-Registered identifiers 
+Registered identifiers
 
 {{< /block-image >}}

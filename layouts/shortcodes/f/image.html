@@ -1,29 +1,22 @@
-{{/*    fomantic shortcode:  image
-
-  use without parmaeter names to manually specify classes or use the helpers.
+{{/*    f/image
 
   Usage:
-    {{% f/image  "vid.mp4".  "ui fluid image"
+    {{% f/image  "vid.mp4" "Rexy" "#top" "ui image" 0 %}}
 
     {{% f/image
          src        = "vid.mp4"
-         class      = "ui fluid image"
          alt        = "Some alt text"
-         caption    ="Centered text below image"
+         url        = "/click/image/url"
+         class      = "ui fluid image"
+         cap        = "showCaption"
     %}}
 
     examples
       {{% f/image myImage.png  %}}
 */}}
-{{ if .Get 0                                                                  }}
-<img class="{{.Get 1}}" src="{{.Get 0}}" />
-{{ else                                                                       }}
-{{   $class        := .Get "class"                                             }}
-{{   $mediaUrl     := .Get "src"                                               }}
-{{   $alt          := .Get "alt"                                               }}
-{{   $caption      := .Get "caption"   | default  ""                           }}
-<img class="{{$class}}" src="{{$mediaUrl}}" alt={{$alt}} />
-{{   if $caption                                                                }}
-<div class="text-center">{{$caption}}</div>
-{{   end  }}
-{{  end                                                                       }}
+{{ $src   := .Get 0                                                           }}
+{{ $alt   := .Get 1                                                           }}
+{{ $url   := .Get 2                                                           }}
+{{ $class := .Get 3  | default "ui image"                                     }}
+{{ $cap   := .Get 4                                                           }}
+{{ partial "f/image" (dict "src" $src "alt" $alt "url" $url "class" $class "cap" $cap)}}                                                              }}

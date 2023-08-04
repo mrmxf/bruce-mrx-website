@@ -3,7 +3,7 @@
 title:       "Timeline"
 linkTitle:   "Timeline"
 description: Timeline to deliver the Responsive Narrative Factory.
-tags: ["status"]
+tags:        ["status"]
 ---
 
 {{% pageinfo %}}

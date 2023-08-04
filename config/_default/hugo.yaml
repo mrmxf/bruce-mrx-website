@@ -1,5 +1,6 @@
 baseURL: "/"
 title: "metarex.media"
+theme: fohuw
 
 # Language settings
 contentDir: "content"
@@ -65,5 +66,4 @@ markup:
 outputs:
   section:
     - HTML
-    - print
     - RSS

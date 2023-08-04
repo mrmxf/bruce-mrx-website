@@ -1,0 +1,21 @@
+<!doctype html>
+{{ `<!-- fohuw _default/baseof.html -->` | safeHTML }}
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+    <div class="ui wide container">
+      <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    </div>
+    <div class="ui grid container">
+      <main role="main" class="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partialCached "scripts.html" . }}
+  </body>
+</html>

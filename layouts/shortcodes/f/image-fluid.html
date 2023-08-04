@@ -1,0 +1,7 @@
+{{/*
+>>eg {{% f/image-fluid "img.png" "some alt-text" "showCaption"
+*/}}
+{{ $src := .Get 0 }}
+{{ $alt := .Get 1 }}
+{{ $cap := .Get 2 }}
+{{ partial "f/image-fluid" (dict "src" $src "alt" $alt "cap" $cap) }}

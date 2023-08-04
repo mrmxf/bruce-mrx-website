@@ -1,0 +1,21 @@
+{{ `<!-- partials/navbar-jumbo-selector.html -->` | safeHTML }}{{/* ------- */}}
+{{- $nums := slice "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" "eleven" "twelve" -}}
+{{- $count := add 2 (len .Site.Params.jumbo) -}}{{/* ---------------------- */}}
+{{- $cols := index $nums $count -}}{{/* ----------------------------------- */}}
+<div class="ui item dropdown">
+	<div class="">
+		{{ .Site.Params.jumbo_menu_text }}<i class="dropdown icon"></i>
+	</div>
+	<div class="menu">
+		{{ range .Site.Params.jumbo -}}{{/* ----------------------------------- */}}
+		<h4 class="ui header">{{ .category }}</h4>
+		<div class="ui  list">
+			{{ range .items }}{{/* ---------------------------------------------- */}}
+			<a class="ui item" href="{{.url}}">
+				{{ .item }}
+				{{ if .icon }}<i class="{{.icon}}"></i>{{end}}{{/*----------------- */}}
+			</a>
+			{{ end }}{{/* -- /range items ----------------------------------------*/}}
+		</div>
+		{{ end }}{{/* -- /range .Site.Params.jumbo -----------------------------*/}}
+	</div>
