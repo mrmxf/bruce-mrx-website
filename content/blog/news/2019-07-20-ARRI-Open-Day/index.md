@@ -24,7 +24,7 @@ MXF-Live was demonstrated at the [ARRI International Broadcast Day 2019](https:/
 
 This 2 year project was a pre-cursor to **[metarex]**
 
-![International Broadcast Demo Day{ class="ui medium left floated image" }](international-broadcast-day-2019-demo.jpg)
+{{< f/image-fluid  "international-broadcast-day-2019-demo.jpg" "2019 International Broadcast Demo Day" "caption" >}}
 
 Ideal for semi-custom metadata such as position,  logging, device parameters
 **Shoot** with on-set metadata from devices and from humans<br>
@@ -41,7 +41,7 @@ An existing open standard for transporting containers of synchronous metadata ov
 IP networks for use in both live and file environments.
 
 An [Arri] Camera and Head sent MXF containers over IP. These were multiplexed with
-Metadata from the [Trackmen] system that gather pan, tilt, yaw, zoom, position, 
+Metadata from the [Trackmen] system that gather pan, tilt, yaw, zoom, position,
 and lens metadata. [Nablet] software managed MXF multiplexing and demultiplexing
 as well as serialising the MXF from the network into a file that could be
 opened in Avid.
@@ -64,43 +64,43 @@ Use the [contact] form to ask questions and suggestions.
 
 #### Photos
 
-[![Team{   class="ui left floated tiny image" }](mxf-live-team-sm.jpg)](#team) &nbsp;
-[![System{ class="ui left floated tiny image" }](mxf-live-system-sm.jpg)](#system) &nbsp;
-[![Rig{    class="ui left floated tiny image" }](mxf-live-rig-sm.jpg)](#rig) &nbsp;
-[![CGI{    class="ui left floated tiny image" }](mxf-live-cgi-sm.jpg)](#cgi1) &nbsp;
-[![CGI{    class="ui left floated tiny image" }](mxf-live-cgi2-sm.jpg)](#cgi2) &nbsp;
-[![Camera{ class="ui left floated tiny image" }](mxf-live-camera-sm.jpg)](#camera) &nbsp;
-[![Demo{   class="ui left floated tiny image" }](international-broadcast-day-2019-demo-sm.jpg)](#demo)
+<div class="ui tiny images">
+{{< f/image "mxf-live-team-sm.jpg"                         "Team"   "#team" >}}
+{{< f/image "mxf-live-system-sm.jpg"                       "System" "#system" >}}
+{{< f/image "mxf-live-rig-sm.jpg"                          "Rig"    "#rig" >}}
+{{< f/image "mxf-live-cgi-sm.jpg"                          "CGI1"   "#cgi1" >}}
+{{< f/image "mxf-live-cgi2-sm.jpg"                         "CGI2"   "#cgi2" >}}
+{{< f/image "mxf-live-camera-sm.jpg"                       "Camera" "#camera" >}}
+{{< f/image "international-broadcast-day-2019-demo-sm.jpg" "Demo"   "#demo" >}}
+</div>
 
-<a id="team" style="float:none;clear:both;">&nbsp;</a>
+<a id="team"></a>
 
-![MXF Live Team{        class="ui fluid centered bordered image" }](featured-mxf-live-team.jpg)
+{{< f/image-fluid  "featured-mxf-live-team.jpg" "MXF Live Team" "showCaption" >}}
 
 <a id="system" ></a>
 
-![MXF Live Demo System{ class="ui fluid centered bordered image" }](mxf-live-system.jpg)
+{{< f/image-fluid  "mxf-live-system.jpg" "MXF Live Demo System" "showCaption" >}}
 
 <a id="rig" ></a>
 
-![MXF Live Demo Rig{    class="ui fluid centered bordered image" }](mxf-live-rig.jpg)
+{{< f/image-fluid  "mxf-live-rig.jpg" "MXF Live Demo Rig" "showCaption" >}}
 
 <a id="cgi1" ></a>
 
-![MXF Live CGI Demo{    class="ui fluid centered bordered image" }](mxf-live-cgi.jpg)
+{{< f/image-fluid  "mxf-live-cgi.jpg" "MXF Live CGI Demo" "showCaption" >}}
 
 <a id="cgi2" ></a>
 
-![MXF Live CGI Demo{    class="ui fluid centered bordered image" }](mxf-live-cgi2.jpg)
+{{< f/image-fluid  "mxf-live-cgi2.jpg" "MXF Live CGI Demo" "showCaption" >}}
 
 <a id="camera" ></a>
 
-![MXF Live Demo Camera{ class="ui fluid centered bordered image" }](mxf-live-camera.jpg)
+{{< f/image-fluid  "mxf-live-camera.jpg" "MXF Live Demo Camera" "showCaption" >}}
 
 <a id="demo" ></a>
 
-![MXF Live Demo{        class="ui fluid centered bordered image" }](international-broadcast-day-2019-demo.jpg)
-
-
+{{< f/image-fluid  "international-broadcast-day-2019-demo.jpg" "MXF Live Demo" "showCaption" >}}
 
 # Partners
 
@@ -207,8 +207,9 @@ Use the [contact] form to ask questions and suggestions.
 
 ### Some Resources from the initial project
 
-* [Original PDF spec] -- ({{< rc "spec" >}})
-* [Original flyer] -- ({{< rc "flyer" >}})
+* <i class="file pdf outline icon"></i>[Original specificatino as PDF](/downloads/mxf-live/MXF_Live_Streaming_Specification_Draft_v.100_2019-10-23.pdf)
+* <i class="file word icon"></i>[Original specificatino as DOCX](/downloads/mxf-live/metastream-specification(github).docx)
+* <i class="file pdf outline icon"></i>[Original flyer](/downloads/mxf-live/mxf-live-ibc-flyer-2019.pdf)
 
 [metarex]:      https://metarex.media
 [arri]:         #arri
@@ -216,4 +217,5 @@ Use the [contact] form to ask questions and suggestions.
 [mr mxf]:       #mrmxf
 [trackmen]:     #trackmen
 [fusionmedia]:  mailto:kevin@fusionmedia.uk.com
-[contact]:      https://mrmxf.com/contact
+
+{{% site-links %}}

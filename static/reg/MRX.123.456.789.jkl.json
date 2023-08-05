@@ -1,0 +1,7 @@
+{
+  "metarexId":     "MRX.123.456.789.jkl",
+  "type":          "embedded CSV text data of the lighting in Rexy's sunbathing scene",
+  "payloadFormat": "text/csv",
+  "specification": "https://docs.unrealengine.com/4.26/en-US/Resources/ContentExamples/Lighting/2_1/",
+  "services": {}
+}

@@ -12,8 +12,9 @@ The Responsive Narrative Factory will be shown at IBC 2023 in the IBC Accelerato
 
 ## Where should I go next?
 
-* [Timeline](/docs/ibc2023/timeline/)
-* [IBC Website](https://show.ibc.org/accelerator-media-innovation-programme/accelerator-project-responsive-narrative-factory)
+* [RNF Timeline]
+* [RNF on IBC Website]
+* [mrx-tool] - a test tool that implements the {{% metarex %}} protocol
+* [mrx-demo] - some demonstration data for the test tool to simulate [Responsive Narrative Factory] workflows
 
-[MXF]:            https://mrmxf.com/mxf
-[OpenTimelinIO]:  https://opentimelineio.readthedocs.io
+{{% site-links %}}

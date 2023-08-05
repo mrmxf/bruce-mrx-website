@@ -1,0 +1,7 @@
+{
+  "metarexId":     "MRX.123.456.789.ghi",
+  "type":          "clocked JSON text of the camera location for Rexy's sunbathing scene",
+  "payloadFormat": "application/json",
+  "specification": "https://docs.unrealengine.com/4.27/en-US/API/Runtime/Engine/Camera/UCameraComponent//",
+  "services": {}
+}

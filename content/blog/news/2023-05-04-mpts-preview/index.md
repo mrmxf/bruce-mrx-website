@@ -15,6 +15,7 @@ tags:        ["project",  "NAB", "MrMXF"]
       id       =  "chris"
  >}}
 
+<!-- markdownlint-disable MD025 -->
 # MetaRex at the Media Production Show 2023
 
 The **Media Production and Technology Show** takes place on the 10th & 11th of
@@ -34,7 +35,7 @@ If you need refreshment after the excitement of the first day, please join us
 for **after-show drinks** at the [Hand and
 Flower](https://goo.gl/maps/eLfifzhXA63WTkYE6), opposite Olympia, from 5pm until
 late on the 10th of May. If you would like to attend, please e-mail
-chris@metarex.media to be added to the guest list.
+[chris@metarex.media] to be added to the guest list.
 
 If you can’t make the show and want to talk Metadata [set up a meeting with us by clicking here](/meet/).
 
