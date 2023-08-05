@@ -16,7 +16,8 @@ linkTitle: Metarex
       id       =  "splash"
  >}}
 
-{{% metarex %}} will create free Open Source software (**FOSS**) to handle media metadata.
+{{% metarex %}} will create free Open Source software (**FOSS**) to handle media
+metadata.
 
 * [Backers](/docs/project/backers) put money in a pot
 * The pot is used to fund the **FOSS**
@@ -70,18 +71,15 @@ linkTitle: Metarex
 <!-- ###  Row boundary ##################################################### -->
 <!--  Backer List ---------------------------------------------------------  -->
 
-{{< blocks/lead                                   >}}
+<div class="ui padded olive segment">
 {{<   include    "content/docs/Admin/backer-list.md" >}}
-{{< /blocks/lead  >}}
+</div>
 
 <!--  Flow chart ----------------------------------------------------------  -->
 
-{{% blocks-lead align="text-start" %}}
-{{< f/image
-	  src      = "/img/mrx-flow.png"
-		class    = "ui fluid image"
-		caption  = "The {{% metarex %}} Flow Diagram 2023"
->}}
+<div class="ui padded purple segment">
+
+{{< f/image-fluid "/img/mrx-flow.png" "The {{% metarex %}} Flow Diagram 2023" "showCaption" >}}
 
 {{% metarex %}} is like Fedex for metadata.
 
@@ -99,11 +97,11 @@ linkTitle: Metarex
   * The end user now has access to, potentially, several variants of the metadata
     before they write their first line of code.
 
-{{% /blocks/lead %}}
+</div>
 
 <!--  Goals ---------------------------------------------------------------  -->
 
-{{< blocks/lead >}}
+<div class="ui center aligned raised olive segment">
 
 {{% metarex %}} will create free Open Source software (**FOSS**) to handle media metadata.
 
@@ -118,20 +116,32 @@ linkTitle: Metarex
 
 {{% metarex %}} enables you to gather, transport, identify and use metadata from
   many sources in workflows.
-
-{{< /blocks/lead >}}
+</div>
 
 <!--  Videos --------------------------------------------------------------  -->
 
-{{< blocks/section >}}
-  {{% block-feature icon="fa-file-code"     title="Technology"  url="docs/technology"          %}}{{< vimeo 755662848 >}}{{% /block-feature %}}
-  {{% block-feature icon="fa fa-file-video" title="Overview"    url="docs/overview"            %}}{{< vimeo 754810227 >}}{{% /block-feature %}}
-  {{% block-feature icon="fab fa-dollar"    title="Backers" url="docs/project/backers" %}}{{< vimeo 755661985 >}}{{% /block-feature %}}
-{{< /blocks/section >}}
+<div class="ui stackable horizontal segments">
+  <div class="ui blue segment">
+  <iframe src="https://player.vimeo.com/video/755662848?h=f9146636bd&autoplay=0&loop=0&quality=540p&responsive=1"
+  title="Tech" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <div class="ui bottom attached message">Technology ...<a href="/docs/technology">Read More...</a></div>
+  </div>
+  <div class="ui purple segment">
+    <iframe src="https://player.vimeo.com/video/754810227?h=f9146636bd&autoplay=0&loop=0&quality=540p&responsive=1"
+  title="Tech" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <div class="ui bottom attached message">Project ... <a href="/docs/overview">Read More...</a></div>
+  </div>
+  <div class="ui olive segment">
+    <iframe src="https://player.vimeo.com/video/755661985?h=f9146636bd&autoplay=0&loop=0&quality=540p&responsive=1"
+  title="Tech" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+  <div class="ui bottom attached message">Backers ...<a href="/docs/project/backers">Read More...</a></div>
+  </div>
+</div>
 
 <!--  ---------------------------------------------------------------------  -->
 
-{{% blocks/lead%}}
+<div class="ui center aligned raised olive segment">
 
 {{% metarex %}} is raising funds to give grants for a freely
 available open source media metadata transport framework.
@@ -139,13 +149,15 @@ available open source media metadata transport framework.
 {{% metarex %}} enables you to gather, transport, identify and use metadata from
 many sources in a single workflow.
 
-{{% /blocks/lead %}}
+</div>
 
 <!--  ---------------------------------------------------------------------  -->
 
-{{% section-left %}}
+<div class="ui small purple segment">
 
-# {{% metarex %}}.media Ltd. Organisation and Entity
+<div class="ui center sligned purple message">
+<div class="header"> {{% metarex %}}.media Ltd. Organisation and Entity</div>
+</div>
 
 {{% metarex %}} is a UK Limited Company that exists for the following
 reasons:
@@ -157,7 +169,7 @@ reasons:
 5. Distribute funds to project grant applicants (companies & individuals)
 6. Dissolve itself after 2 years at the boards discretion
 
-# Board
+### Board
 
 A board of 3-7 members is initially created from the Gold Tier backers. The
 company health is led by the Executive Director and the work is coordinated
@@ -187,4 +199,4 @@ The project will continue until 2024-12-31 and then be wound up by the board
 leaving all code and open source content in place with a sustaining plan to
 ensure it's longevity.
 
-{{% /section-left %}}
+</div>

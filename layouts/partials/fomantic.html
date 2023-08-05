@@ -1,9 +1,0 @@
-{{ `<!-- partials/fomantic.html -->` | safeHTML }}
-{{/*-- curl  https://api.cdnjs.com/libraries/fomantic-ui/ > tmp/fui.json  --*/}}
-{{/*--  You MUST include jQuery 3+ before Fomantic -------------------------*/}}
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
-{{- $ver := "2.9.2" -}}{{/* ----------------------------------------------- */}}
-{{- $url := "https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui" -}}{{/* -- */}}
-
-<script src="{{ $url }}/{{ $ver}}/semantic.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
-<link href="{{ $url }}/{{ $ver}}/semantic.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet" />
