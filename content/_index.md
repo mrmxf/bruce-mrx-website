@@ -59,7 +59,7 @@ metadata.
   <div class="extra content">
     <a>
       <i class="user icon"></i>
-      22 Friends
+      16 Backers and rising
     </a>
   </div>
 </div>
@@ -67,6 +67,14 @@ metadata.
 {{< /f/cards                                                                 >}}
 
 {{< /f/row                                                                   >}}
+
+{{< /f/cards                                                                 >}}
+<!-- ###  Row boundary ##################################################### -->
+<!--  Introduction --------------------------------------------------------  -->
+
+<div class="ui padded olive segment">
+{{<   include    "content/docs/Project/introduction.md" >}}
+</div>
 
 <!-- ###  Row boundary ##################################################### -->
 <!--  Backer List ---------------------------------------------------------  -->

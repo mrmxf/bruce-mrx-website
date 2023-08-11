@@ -1,9 +1,9 @@
 ---
 title:       Contact - Join the project!
 linkTitle:   Contact
-date:        2022-11-25
+date:        2023-07-25
 description: Share some metadata with us.
-menu: 
+menu:
   main:
     name: Contact
     weight: 09
@@ -13,7 +13,7 @@ menu:
 
 url:         "/contact/"
 
-tags:        ["contact"] 
+tags:        ["contact"]
 ---
 
 <div>

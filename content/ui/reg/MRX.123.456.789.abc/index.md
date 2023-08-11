@@ -1,7 +1,6 @@
 ---
 title:       MRX.123.456.789.abc
 linkTitle:   MRX.123.456.789.abc
-url:         /ui/reg/MRX.123.456.789.abc
 description: Sample registration for comment
 ---
 # MRX.123.456.789.abc
@@ -22,22 +21,3 @@ resolve to a web page where there is information on how to:
   * `encoder` links to one or more encoder(s) for the metadata
   * `services` links to online services that can handle the raw or metarex
     encapsulated metadata
-
-```json
-BEGIN-METAREX-JSON
-{
-    "metarexId": "MRX.123.456.789.abc",
-    "type": "binay serialised Raspberry Pi data",
-    "format": "application/octet-stream",
-    "specification": "https://github.com/mrmxf/metarex/MRX.123.456.789.abc/spec",
-    "decoder": "https://github.com/mrmxf/metarex/MRX.123.456.789.abc/code",
-    "services": {
-        "avid":      "https://some-decoder.com/api/avid/v1"
-        "transcode": "https://some-magic.com/api/avid/v1"
-    },
-}
-END-METAREX-JSON
-```
-
-The project should also decide if this lightweight JSON should be delivered raw
-at an API endpoint, embedded in a register webpage (like this) or both.

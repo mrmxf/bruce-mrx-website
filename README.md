@@ -26,3 +26,17 @@ device 😃.
 [golang]:            https://go.dev/doc/install
 [Hugo]:              https://gohugo.io/installation/
 [Hugo theme module]: https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme
+
+## deploying
+
+Build the docker file and push it to your favorite image registry. On the host
+use this style of execution:
+```sh
+# pull the docker image
+
+# run the docker image for a proxy forwarder on port 10000
+docker run -d -p 10000:80 mrx-static
+
+# check it's working
+curl localhost:10000
+```

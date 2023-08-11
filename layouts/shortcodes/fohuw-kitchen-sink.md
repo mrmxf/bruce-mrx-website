@@ -12,5 +12,5 @@ in the same order as the Fomantic website. If a shortcode does not exist then
 
 ###
 
-{{ partial "site-links" }}
+{{ partial "sitelinks" }}
 [Card]:     https://fomantic-ui.com/views/card.html

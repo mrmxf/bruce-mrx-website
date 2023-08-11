@@ -77,4 +77,4 @@ Bruce Devlin (Mr. MXF, metarex.media, SMPTE)
 <a id="considerations"></a>
 {{% include "content/docs/reference/mxf-live-inc/08-considerations.md" %}}
 
-{{% site-links %}}
+{{% sitelinks %}}

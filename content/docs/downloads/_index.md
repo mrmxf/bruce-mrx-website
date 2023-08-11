@@ -24,6 +24,15 @@ resources:
     download: true
     description: A sample backer agreement that will be signed using an Adobe sign workflow if you become a backer.
     group: Project Documents
+- name: introToMetarex
+  title: An Introduction to MetaRex
+  # this file is uploaded directly to the host and is not in GitHub
+  src: /downloads/introduction-to-metarex.pdf
+  params:
+    icon: file pdf outline
+    download: true
+    description: An introduction to send to you colleagues.
+    group: Project Documents
 # ------------------------------------------------------------------------------
 - name: mrxf-rexy-sunbathing
   title: Rexy Sunbathing Metarex Sidecar

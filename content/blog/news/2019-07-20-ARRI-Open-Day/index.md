@@ -218,4 +218,4 @@ Use the [contact] form to ask questions and suggestions.
 [trackmen]:     #trackmen
 [fusionmedia]:  mailto:kevin@fusionmedia.uk.com
 
-{{% site-links %}}
+{{% sitelinks %}}

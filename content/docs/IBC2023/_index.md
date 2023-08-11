@@ -17,4 +17,4 @@ The Responsive Narrative Factory will be shown at IBC 2023 in the IBC Accelerato
 * [mrx-tool] - a test tool that implements the {{% metarex %}} protocol
 * [mrx-demo] - some demonstration data for the test tool to simulate [Responsive Narrative Factory] workflows
 
-{{% site-links %}}
+{{% sitelinks %}}

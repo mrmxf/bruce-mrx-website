@@ -2,7 +2,7 @@
 
 title:       "Status"
 linkTitle:   "Status"
-weight:      10
+weight:      50
 description: Current Status.
 tags: ["status"]
 ---

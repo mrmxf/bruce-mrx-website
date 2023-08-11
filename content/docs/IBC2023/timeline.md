@@ -60,4 +60,4 @@ gantt
     IBC promotion          :mkt, 2023-07-17, 2023-09-14
 ```
 
-{{% site-links %}}
+{{% sitelinks %}}

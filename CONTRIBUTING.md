@@ -1,6 +1,6 @@
 # How to Contribute
 
-We'd love to accept your patches and contributions to this projectand to the
+We'd love to accept your patches and contributions to this project and to the
 website. There are just a few small guidelines you need to follow.
 
 ## Contributor License Agreement
