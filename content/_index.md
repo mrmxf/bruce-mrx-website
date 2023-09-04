@@ -83,6 +83,13 @@ metadata.
 </div>
 
 <!-- ###  Row boundary ##################################################### -->
+<!--  Introduction --------------------------------------------------------  -->
+
+<div class="ui padded olive segment">
+{{<   include    "content/docs/Project/introduction.md" >}}
+</div>
+
+<!-- ###  Row boundary ##################################################### -->
 <!--  Backer List ---------------------------------------------------------  -->
 
 <div class="ui padded olive segment">
