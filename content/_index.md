@@ -33,7 +33,7 @@ metadata.
 * [Download](/downloads/samples/rexy_sunbathe_mrx.zip) a sample metarex file for
   Rexy's sunbathing scene. It has some issues that are being worked on. The
   [registration information](/ui/reg/MRX.123.456.789.def) is in the register and
-  the [high level documentation]() in online.
+  the [high level documentation](ui/reg/) in online.
 
 {{< /f/card >}}
 
@@ -65,10 +65,16 @@ metadata.
 </div>
 
 {{< /f/cards                                                                 >}}
-
 {{< /f/row                                                                   >}}
 
 {{< /f/cards                                                                 >}}
+<!-- ###  Row boundary ##################################################### -->
+<!--  Introduction --------------------------------------------------------  -->
+
+<div class="ui padded olive segment">
+{{<   include    "content/docs/Project/introduction.md" >}}
+</div>
+
 <!-- ###  Row boundary ##################################################### -->
 <!--  Introduction --------------------------------------------------------  -->
 

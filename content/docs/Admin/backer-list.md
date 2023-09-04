@@ -4,7 +4,7 @@ linkTitle:   Backer List
 date:        2023-01-12
 
 url:         "/backers/"
-tags:        ["backers"] 
+tags:        ["backers"]
 ---
 # Our Backers
 
@@ -21,6 +21,7 @@ tags:        ["backers"]
 {{< backer/logo    name="testronic"                                 url="https://testroniclabs.com/"    >}}
 
 {{< backer/section name="regular" >}}
+{{< backer/logo    name="codemill"                                  url="https://www.codemill.se/"      >}}
 {{< backer/logo    name="metaglue"                                  url="https://metaglue.com/"         >}}
 {{< backer/logo    name="remotefilming"  title= "remote filming"    url="https://remotefilming.com/"    >}}
 {{< backer/logo    name="sdvi"                                      url="https://sdvi.com/"             >}}

@@ -45,6 +45,10 @@ vscode:
     - ms-vscode.vscode-typescript-tslint-plugin              # typescript
     - stkb.rewrap                                            # wrap markdown at column boundaries
     - DotJoshJohnson.xml                                     # xml formatting xpath etc
-# --- hugo
+# --- hugo helpers
     - kaellarkin.hugo-shortcode-syntax                       # hugo syntax highlighter
-    - akmittal.hugofy                                        # hogo helper
+    - akmittal.hugofy                                        # hugo helper
+    - DotJoshJohnson.xml
+    - rusnasonov.vscode-hugo
+    - fivethree.vscode-hugo-snippets
+    - budparr.language-hugo-vscode
