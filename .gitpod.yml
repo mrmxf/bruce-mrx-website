@@ -8,9 +8,9 @@
 
 tasks:
   - name:    cloggy
-    before:  clogrc/gp-tasks.sh
-    init:    clogrc/gp-tasks.sh
-    command: clogrc/gp-tasks.sh
+    before:  clogrc/hugo-gp-tasks.sh
+    init:    clogrc/hugo-gp-tasks.sh
+    command: clogrc/hugo-gp-tasks.sh
 
 # port for server & godoc
 ports:

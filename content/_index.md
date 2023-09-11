@@ -5,7 +5,83 @@ linkTitle: Metarex
 ---
 <!-- ###  Row boundary ##################################################### -->
 {{< f/row                                                                    >}}
-{{< f/cards                                                                  >}}
+{{< f/cards class = "ui two stackable cards"                            >}}
+
+<!-- --- card -------------------------------------------------------------  -->
+{{< f/card-video
+      src         =  "https://metarex.media/rnf/sources/rnf-sizzle.mp4"
+      header      =  "Responsive Narrative Factory (RNF)"
+      extra       =  "IBC Hall 3 Friday at 14:00"
+      id          =  "splash"
+      class       = "ui olive card"
+      autoplay  = true
+      controls  = true
+ >}}
+
+{{% metarex %}} is at IBC in Hall 3 on the Responsive Narrative Factory Accelerator Pod.
+
+* **[BBC](https://www.bbc.co.uk/programmes/p0f8xhj4)**, **[MetaRex](/)**,
+  **[Infuse](https://www.infuse.video/)**, **[Cuvo](https://www.cuvo.io/)**,
+  **[EZDRM](https://www.ezdrm.com/)**,
+  **[JPBMedia](https://www.linkedin.com/in/bergerjoshua/)**
+* Personalized Streaming Video - you're in charge of the viewing
+* Metadata driven Video - you're in control of the creation
+* [Book a meeting`t IBC`](/meet)
+
+
+{{< /f/card-video >}}
+
+
+<!-- --- card -------------------------------------------------------------  -->
+
+{{< f/card
+      src =  "/img/dino/stickers/rexy-chair.png"
+      credit   =  ""
+      header   =  "(RNF) - IBC Accelerator - Hall 3"
+      extra    =  "IBC Hall 3 Friday at 14:00"
+      id       =  "splash"
+      class    = "ui basic violet centered card"
+ >}}
+
+{{% metarex %}} is part of the Responsive Narrative Factory at IBC. But we're
+also there to have a bit of fun. 
+
+<div class="ui red message"><div class="header">FREE GIVE AWAY - at 13:30 EVERY DAY!</div></div>
+<div class="ui orange message">FREE dino stickers -just ask</div>
+<div class="ui green message">FREE Metadata Counselling
+<div class="header">Bring us your problems and see how we can help.</div></div>
+
+{{< /f/card >}}
+
+{{< /f/row                                                                   >}}
+{{< /f/cards                                                                  >}}
+
+<!-- ###  Row boundary ##################################################### -->
+
+{{< f/row                                                                    >}}
+{{< f/cards class = "ui three stackable cards"                            >}}
+
+<!-- --- card -------------------------------------------------------------  -->
+
+{{< f/card
+      src =  "/img/dino/rexy-phone-holder.png"
+      credit   =  ""
+      title    =  "Grab a sticker"
+      extra    =  "IBC Hall 3 Friday at 14:00"
+      id       =  "splash"
+      class    = "ui basic yellow centered card"
+ >}}
+
+{{% metarex %}} is at IBC in Hall 3 on the Responsive Narrative Pod.
+
+* FREE GIVE AWAY - every day at 13:30 we draw business card to win a Rexy phone
+  holder.
+* FREE dino stickers - grab a sticker featuring rexy's pals
+* FREE Metadata counselling - talk to us about metadata workflows - we'll ease your pain
+* [Book a meeting](/meet)
+
+
+{{< /f/card >}}
 
 <!-- --- card -------------------------------------------------------------  -->
 {{< f/card
@@ -42,27 +118,6 @@ metadata.
 {{< f/card-blog >}}
 
 <!-- --- card -------------------------------------------------------------  -->
-
-<div class="ui card">
-  <div class="image">
-    <img src="/img/event/ibc2023-rnf-web.png">
-  </div>
-  <div class="content">
-    <a class="header">RNF</a>
-    <div class="meta">
-      <span class="date">September 2013</span>
-    </div>
-    <div class="description">
-      Come and see us at the IBC Accelerator Zone in Hall 3.
-    </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      16 Backers and rising
-    </a>
-  </div>
-</div>
 
 {{< /f/cards                                                                 >}}
 {{< /f/row                                                                   >}}

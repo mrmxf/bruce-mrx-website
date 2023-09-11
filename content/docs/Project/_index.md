@@ -11,7 +11,7 @@ tags:        ["docs", "project"]
 
 {{< f/card-centered
     src= "/img/dino/mrx-logo-0100.png"
-    imgClass="small"
+    mediaClass="small"
     header="metarex.media"
     meta="is like a zip file with a timeline. It's used like an electronic FedEx service."  />}}
 
