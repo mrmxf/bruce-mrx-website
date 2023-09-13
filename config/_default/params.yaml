@@ -55,12 +55,12 @@ site_is_archived: false
 # --- jumbo --------------------------------------------------------------------
 # Menu title if your navbar has a jumbo selector to access .Site defined links.
 # This menu appears only if you have at least one [params.jumbo] set.
-jumbo_menu_text: Software
+#jumbo_menu_text: Software
 
 # The jumbo selector is a categorised array number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
 # current doc set.
-jumbo:
+No_jumbo:
   - category: mrx-tool
     items:
     - item: "@latest"

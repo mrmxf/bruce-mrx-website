@@ -10,7 +10,8 @@ linkTitle: Metarex
 <!-- --- card -------------------------------------------------------------  -->
 {{< f/card-video
       src         =  "https://metarex.media/rnf/sources/rnf-sizzle.mp4"
-      header      =  "Responsive Narrative Factory (RNF)"
+      poster      =  "/img/event/ibc2023-poster-rnf-sizzle.png"
+      header      =  "IBC Accelerator Zone 2023"
       extra       =  "IBC Hall 3 Friday at 14:00"
       id          =  "splash"
       class       = "ui olive card"
@@ -18,40 +19,60 @@ linkTitle: Metarex
       controls  = true
  >}}
 
-{{% metarex %}} is at IBC in Hall 3 on the Responsive Narrative Factory Accelerator Pod.
+{{% metarex %}} is at IBC in Hall 3 on the Responsive Narrative Factory Pod.
 
-* **[BBC](https://www.bbc.co.uk/programmes/p0f8xhj4)**, **[MetaRex](/)**,
-  **[Infuse](https://www.infuse.video/)**, **[Cuvo](https://www.cuvo.io/)**,
-  **[EZDRM](https://www.ezdrm.com/)**,
-  **[JPBMedia](https://www.linkedin.com/in/bergerjoshua/)**
-* Personalized Streaming Video - you're in charge of the viewing
-* Metadata driven Video - you're in control of the creation
-* [Book a meeting`t IBC`](/meet)
-
+<div class="ui red message"><div class="header">
+  <a href="https://www.bbc.co.uk/programmes/p0f8xhj4" target="_blank">BBC</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/"                                                        >MetaRex</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.infuse.video/"                 target="_blank">Infuse</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.cuvo.io"                       target="_blank">Cuvo</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.ezdrm.com"                     target="_blank">EZDRM</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/bergerjoshua"  target="_blank">JPBMedia</a>
+</div></div>
+<div class="ui orange message">
+  <a href="https://metarex.media/meet"                       >Book a meeting</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/docs/specifications/"                            >Read the Specs</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://github.com/metarex-media/"   target="_blank">See the Code</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://ibcdemo.cuvo.io/"            target="_blank">See the Demo</a>
+</div>
+<div class="ui green message">
+  <p><strong>Personalized Streaming Video</strong> - you're in charge of the viewing</p>
+  <p><strong>Metadata driven Video</strong> - you're in control of the creation</p>
+</div>
 
 {{< /f/card-video >}}
 
-
 <!-- --- card -------------------------------------------------------------  -->
 
-{{< f/card
-      src =  "/img/dino/stickers/rexy-chair.png"
-      credit   =  ""
-      header   =  "(RNF) - IBC Accelerator - Hall 3"
-      extra    =  "IBC Hall 3 Friday at 14:00"
-      id       =  "splash"
-      class    = "ui basic violet centered card"
+{{< f/card-video
+      src         =  "/img/event/ibc2023-free-stuff.mp4"
+      poster      =  "/img/event/ibc2023-merch/poster-phone-holder.png"
+      header      =  "(RNF) - IBC Accelerator - Hall 3"
+      extra       =  "IBC Hall 3 Friday at 14:00"
+      id          =  "free-stuff"
+      class       =  "ui red card"
+      autoplay  = true
+      controls  = true
  >}}
 
-{{% metarex %}} is part of the Responsive Narrative Factory at IBC. But we're
-also there to have a bit of fun. 
+{{% metarex %}} is also at IBC to have a bit of fun.
 
 <div class="ui red message"><div class="header">FREE GIVE AWAY - at 13:30 EVERY DAY!</div></div>
-<div class="ui orange message">FREE dino stickers -just ask</div>
-<div class="ui green message">FREE Metadata Counselling
-<div class="header">Bring us your problems and see how we can help.</div></div>
+<div class="ui orange message">Ask for dino stickers - we have 25/day to give away.</div>
+<div class="ui green message">
+  <p><strong>FREE</strong> Metadata Counselling</p>
+  <p>Bring us your <strong>metadata problems</strong> and see how we can help.</p>
+</div>
 
-{{< /f/card >}}
+{{< /f/card-video >}}
 
 {{< /f/row                                                                   >}}
 {{< /f/cards                                                                  >}}
@@ -59,31 +80,10 @@ also there to have a bit of fun.
 <!-- ###  Row boundary ##################################################### -->
 
 {{< f/row                                                                    >}}
-{{< f/cards class = "ui three stackable cards"                            >}}
+{{< f/cards class = "ui two stackable cards"                            >}}
 
 <!-- --- card -------------------------------------------------------------  -->
 
-{{< f/card
-      src =  "/img/dino/rexy-phone-holder.png"
-      credit   =  ""
-      title    =  "Grab a sticker"
-      extra    =  "IBC Hall 3 Friday at 14:00"
-      id       =  "splash"
-      class    = "ui basic yellow centered card"
- >}}
-
-{{% metarex %}} is at IBC in Hall 3 on the Responsive Narrative Pod.
-
-* FREE GIVE AWAY - every day at 13:30 we draw business card to win a Rexy phone
-  holder.
-* FREE dino stickers - grab a sticker featuring rexy's pals
-* FREE Metadata counselling - talk to us about metadata workflows - we'll ease your pain
-* [Book a meeting](/meet)
-
-
-{{< /f/card >}}
-
-<!-- --- card -------------------------------------------------------------  -->
 {{< f/card
       src =  "/meeja/mrx-rexy-nab-2023.mp4"
       credit   =  ""
@@ -140,7 +140,7 @@ metadata.
 
 <div class="ui padded purple segment">
 
-{{< f/image-fluid "/img/mrx-flow.png" "The {{% metarex %}} Flow Diagram 2023" "showCaption" >}}
+{{< f/image-fluid "/img/mrx-flow.png" "The MetaRex Flow Diagram 2023" "showCaption" >}}
 
 {{% metarex %}} is like Fedex for metadata.
 

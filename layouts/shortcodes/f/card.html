@@ -43,7 +43,7 @@
 {{ end                                                                        }}
 {{ if  or ( .Get "description" ) (.Inner)                                     }}
     <div class="description">
-      {{- .Get "description" -}}{{if strings.Contains .Inner "</"
+      {{- .Get "description" -}}{{if strings.Contains .Inner "<div"
     }}{{- .Inner -}}{{else}}{{- .Inner | markdownify -}}{{end}}
     </div>
 {{ end                                                                        }}

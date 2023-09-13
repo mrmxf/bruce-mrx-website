@@ -22,9 +22,9 @@ class: ui raised card
 
   */}}
 
-  <div class="ui olive card">
+  <div class="ui {{ .Get "class" }} card">
     <div style="aspect-ratio: 1 / 1;width:100%;align-content:center;background-color:darkgray;">
-      <video class="ui centered image" poster="/img/event/ibc2023-rnf-sizzle.png" autoplay=1 loop=1 controls=1
+      <video class="ui centered image" poster="{{ .Get "poster" }}" autoplay="1" loop="1" controls="1" muted="1"
       style="  position: relative;top: 50%;transform: translateY(-50%);"
       >
         <source src="{{ .Get "src" }}"  />
