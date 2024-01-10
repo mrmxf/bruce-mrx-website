@@ -4,6 +4,7 @@
 
 <head>
   {{ partial "head.html" . }}
+  <meta http-equiv="Content-Security-Policy"  content="frame-src https://faq.metarex.media;">
 </head>
 
 <body class="{{ with .Page.Params.body_class }} {{ . }}{{ end }}">

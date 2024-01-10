@@ -20,6 +20,10 @@ Once you've (cloned or forked & cloned) the repo, you need to install both
 environment to ensure I could update the site from anywhere, anytime on any
 device 😃.
 
+### Edit with VS Code
+
+1.
+
 [Docsy]:             https://github.com/google/docsy
 [fomantic ui]:       https://fomantic-ui.com/
 [gitpod]:            https://www.gitpod.io/

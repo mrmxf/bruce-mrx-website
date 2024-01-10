@@ -19,7 +19,8 @@ tmp/*
 !tmp/readme.md
 
 #ignore mac artifacts
-*/.DS_Store
+**/*/.DS_Store
+.DS_Store
 # IDE files
 .idea
 
