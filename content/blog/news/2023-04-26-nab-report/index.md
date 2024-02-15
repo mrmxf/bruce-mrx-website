@@ -10,7 +10,7 @@ tags:        ["project",  "NAB", "MrMXF"]
 {{< card/media
       mediaUrl =  "featured-bruce.jpg"
       mediaOn  =  "left"
-      widthFloat = 0.1
+      widthFloat = 0.3
       credit   =  ""
       id       =  "bruce"
  >}}

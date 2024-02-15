@@ -7,7 +7,7 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "CES", "yellowbasket"]
 ---
 
-{{< block-image
+{{< card/media
     alt=      "Katya"
     position= "left"
     size=     "tiny"
@@ -31,7 +31,7 @@ CES features every aspect of the tech sector.
  challenging for us to stay focused and not to be distracted by all the toys on
  show.
 
-{{< /block-image>}}
+{{< /card/media>}}
 
 <!-- ####################################################################### -->
 

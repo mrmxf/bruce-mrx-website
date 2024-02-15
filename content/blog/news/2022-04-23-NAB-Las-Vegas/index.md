@@ -9,11 +9,12 @@ tags:        ["project",  "Mr MXF", "IBC"]
 
 ## NAB Show 2022
 
-{{< block-image
-    alt=      "metarex at NAB"
-    position= "left" 
-    size=     "small"
-    imageUrl= "featured-intelligent-content-icon.webp"
+{{< card/media
+    mediaUrl =  "featured-intelligent-content-icon.webp"
+    mediaOn  =  "left"
+    widthFloat = 0.3
+    credit   =  ""
+    id       =  "metarex at NAB"
 >}}
 
 [Intelligent Content](https://nabshow.com/2022/experience-whats-new/connect/)
@@ -26,7 +27,7 @@ traffic with streams of video and audio, but the metadata transport puzzle was
 still a piecemeal region-by-region, application-by-application, device-by-device
 tailored solution.
 
-{{< /block-image >}}
+{{< /card/media >}}
 
 We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 
@@ -36,11 +37,26 @@ We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 * Would it help if you could download tools and apps from Github for free?
 * Would you be prepared to contribute to a fund to make it happen?
 
-{{< block-image alt="metarex" size="tiny" imageUrl="/img/dino/mrx-logo.svg" >}}
+{{< f/cards >}}
+{{< f/card
+  id       =  "logo"
+  src =  "/img/dino/mrx-logo.svg"
+  srcOn  =  "left"
+  srcWRatio = 0.1
+  credit   =  ""
+  id="cardID anchors"
+  description="Body Text" | none"
+  src="image/video/"
+  srcId="media-id"
+  srcClickUrl="/some/page"
+  imgClass="mini | small | medium etc"
+  header="Header text
+  meta="Meta below heading"
+>}}
 
 > The answer to all these questions was **Yes**.
 
-
 > Time to start figuring out how to make it real...
 
-{{< /block-image >}}
+{{< f/card >}}
+{{</ f/cards >}}

@@ -7,11 +7,12 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "NAB", "yellowbasket"]
 ---
 
-{{< block-image
-    alt=      "Katya"
-    position= "left"
-    size=     "tiny"
-    imageUrl= "featured-katya.jpg"
+{{< card/media
+    mediaUrl =  "featured-katya.jpg"
+    mediaOn  =  "left"
+    widthFloat = 0.3
+    credit   =  ""
+    id       =  "katya"
 >}}
 
 # XR, Metaverse and Metadata at NAB 2023
@@ -26,7 +27,8 @@ importantly **the monetization** of the content. In the **NexGenTV**, remote
 production, XR and virtualization, the accuracy of Metadata is playing the most
 important role.
 
-{{< /block-image >}}
+{{< sitelinks >}}
+{{< /card/media >}}
 
 <!-- ####################################################################### -->
 

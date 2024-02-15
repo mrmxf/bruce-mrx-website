@@ -7,9 +7,9 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "football", "yellowbasket"]
 ---
 
-{{< block-image
+{{< card/media
     alt=      "Katya"
-    position= "left" 
+    position= "left"
     size=     "tiny"
     imageUrl= "featured-katya.jpg"
 >}}
@@ -28,13 +28,13 @@ streamlining operations and setup.
 [Fifa]: https://www.fifa.com/
 [HBS]:  https://www.hbs.tv/about-us/
 
-{{< /block-image >}}
+{{< /card/media >}}
 
 <!-- ####################################################################### -->
 
-{{< block-image
+{{< card/media
     alt=      "football setup"
-    position= "right" 
+    position= "right"
     size=     "large"
     imageUrl= "football-rigging.png"
 >}}
@@ -75,7 +75,7 @@ The lineup of feeds:
 * Emotion clips
 * Permanent highlights
 
-{{< /block-image >}}
+{{< /card/media >}}
 
 <!-- ####################################################################### -->
 
@@ -94,9 +94,9 @@ quantity and **searchability** of assets.
 
 <!-- ####################################################################### -->
 
-{{< block-image
+{{< card/media
     alt=      "football setup"
-    position= "right" 
+    position= "right"
     size=     "full"
     imageUrl= "feeds.png"
 />}}
@@ -107,18 +107,18 @@ mix produced in two immersive-sound galleries at the IBC. At the center of those
 efforts, an eight-capsule microphone array at each stadium is supported by
 additional three-dimensional microphone arrays located closer to the spectators.
 
-{{< block-image
+{{< card/media
     alt=      "football spectators"
-    position= "right" 
+    position= "right"
     size=     "full"
     imageUrl= "mobile-viewer.jpg"
 />}}
 
-{{< block-image
+{{< card/media
     alt=      "football spectators Morocco-Portugal match taken on Madeira island"
-    position= "right" 
+    position= "right"
     size=     "full"
     imageUrl= "portugal-watchers.jpg"
 />}}
- 
+
  [backers]: /docs/project/backers/

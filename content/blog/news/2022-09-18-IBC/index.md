@@ -7,11 +7,12 @@ tags:        ["project",  "Mr MXF", "IBC", "Modulamedia"]
 description: Finding support on the show floor of IBC 2022.
 ---
 
-{{< block-image
-    alt=      "mxf-live demo at ARRI"
-    position= "left" 
-    size=     "small"
-    imageUrl= "featured-ibc-2022.jpg"
+{{< card/media
+    mediaUrl =  "featured-ibc-2022.jpg"
+    mediaOn  =  "left"
+    widthFloat = 0.3
+    credit   =  ""
+    id       =  "mxf-live demo at ARRI"
 >}}
 
 An in-person IBC after the long COVID break was both exciting and busy. My 10km
@@ -23,7 +24,7 @@ discarded during productions. More folks were inventing new protocols for their
 AI metadata because there isn't a standard way to ship metadata on a timeline
 from where it's made to where it's needed.
 
-{{< /block-image >}}
+{{< /card/media >}}
 
 My big take away is that if we run the {{% metarex %}} project with the
 following constraints then it is likely to be a success:

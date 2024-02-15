@@ -40,6 +40,7 @@
         "Signiant",
         "Simi",
         "simizeko",
+        "sitelinks",
         "sligned",
         "SMPTE",
         "stackable",
@@ -52,5 +53,6 @@
         "Wegner",
         "workplan",
         "Zeko"
-    ]
+    ],
+    "workbench.colorTheme": "Default Light+"
 }

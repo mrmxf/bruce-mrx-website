@@ -79,7 +79,7 @@ team did a lot of talking to  content creators, facility owners, software
 vendors and many others about what were the blockers that stopped metadata being
 a first class citizen. The biggest issue was "_The metadata gets lost_".
 
-{{< block-image
+{{< card/media
     alt=      "mxf-live demo at ARRI"
     position= "left"
     size=     "small"
@@ -99,7 +99,7 @@ the metadata to the right place at the right time.
 [G-FORS]:                https://www.tvtechnology.com/news/mxf-gets-ready-for-nab-are-you-ready-for-it-242793
 [ARRI Broadcast Day]:    /blog/2019/07/20/mxf-live-at-arri-international-broadcast-day-2019/
 
-{{< /block-image >}}
+{{< /card/media >}}
 
 {{% metarex %}} is in full flight. We need [backers] to create a
 financial reserve from which we can give out grants to engineering teams to

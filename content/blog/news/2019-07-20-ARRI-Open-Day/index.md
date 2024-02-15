@@ -18,13 +18,18 @@ resources:
 
 ---
 
-MXF-Live was demonstrated at the [ARRI International Broadcast Day 2019](https://www.arri.com/en/solutions/broadcast/broadcast-day-2019).
+MXF-Live was demonstrated at the [ARRI International Broadcast Day
+2019](https://www.arri.com/en/solutions/broadcast/broadcast-day-2019).
 
 ## Live Metadata Capture and Rendering in MXF
 
 This 2 year project was a pre-cursor to **[metarex]**
 
-{{< f/image-fluid  "international-broadcast-day-2019-demo.jpg" "2019 International Broadcast Demo Day" "caption" >}}
+{{< f/image-fluid
+  "international-broadcast-day-demo.jpg"
+  "2019 International Broadcast Demo Day"
+  "caption"
+>}}
 
 Ideal for semi-custom metadata such as position,  logging, device parameters
 **Shoot** with on-set metadata from devices and from humans<br>
@@ -37,26 +42,33 @@ Ideal for semi-custom metadata such as position,  logging, device parameters
 
 ### What is it?
 
-An existing open standard for transporting containers of synchronous metadata over
-IP networks for use in both live and file environments.
+An existing open standard for transporting containers of synchronous metadata
+over IP networks for use in both live and file environments.
 
-An [Arri] Camera and Head sent MXF containers over IP. These were multiplexed with
-Metadata from the [Trackmen] system that gather pan, tilt, yaw, zoom, position,
-and lens metadata. [Nablet] software managed MXF multiplexing and demultiplexing
-as well as serialising the MXF from the network into a file that could be
-opened in Avid.
+An [Arri] Camera and Head sent MXF containers over IP. These were multiplexed
+with Metadata from the [Trackmen] system that gather pan, tilt, yaw, zoom,
+position, and lens metadata. [Nablet] software managed MXF multiplexing and
+demultiplexing as well as serialising the MXF from the network into a file that
+could be opened in Avid.
 
 <a id="why" ></a>
 
 ### Why?
 
-Many productions have rich metadata such as lens information, gimble telemetry, camera position information, shot logging and other bulky metadata that is created. The workflows to get it into the show are often ad-hoc. This project uses open standards to preserve metadata in a way that minimises re-wrap and re-engineering the data.
+Many productions have rich metadata such as lens information, gimble telemetry,
+camera position information, shot logging and other bulky metadata that is
+created. The workflows to get it into the show are often ad-hoc. This project
+uses open standards to preserve metadata in a way that minimises re-wrap and
+re-engineering the data.
 
 <a id="who" ></a>
 
 ### Who?
 
-Led by **[Arri]**, the team included **[Nablet]**, **[Trackmen]**, **[Fusionmedia]** and **[Mr MXF]** as coordinator. What's Next? The system works and we're looking for partners to develop a framwework for handling any kind of metadata. See the [metarex] website for details
+Led by **[Arri]**, the team included **[Nablet]**, **[Trackmen]**,
+**[Fusionmedia]** and **[Mr MXF]** as coordinator. What's Next? The system
+works and we're looking for partners to develop a framwework for handling any
+kind of metadata. See the [metarex] website for details
 
 ### Contact
 
@@ -65,18 +77,22 @@ Use the [contact] form to ask questions and suggestions.
 #### Photos
 
 <div class="ui tiny images">
-{{< f/image "mxf-live-team-sm.jpg"                         "Team"   "#team" >}}
-{{< f/image "mxf-live-system-sm.jpg"                       "System" "#system" >}}
-{{< f/image "mxf-live-rig-sm.jpg"                          "Rig"    "#rig" >}}
-{{< f/image "mxf-live-cgi-sm.jpg"                          "CGI1"   "#cgi1" >}}
-{{< f/image "mxf-live-cgi2-sm.jpg"                         "CGI2"   "#cgi2" >}}
-{{< f/image "mxf-live-camera-sm.jpg"                       "Camera" "#camera" >}}
-{{< f/image "international-broadcast-day-2019-demo-sm.jpg" "Demo"   "#demo" >}}
+{{< f/image "mxf-live-team-sm.jpg"                    "Team"   "#team"   >}}
+{{< f/image "mxf-live-system-sm.jpg"                  "System" "#system" >}}
+{{< f/image "mxf-live-rig-sm.jpg"                     "Rig"    "#rig"    >}}
+{{< f/image "mxf-live-cgi-sm.jpg"                     "CGI1"   "#cgi1"   >}}
+{{< f/image "mxf-live-cgi2-sm.jpg"                    "CGI2"   "#cgi2"   >}}
+{{< f/image "mxf-live-camera-sm.jpg"                  "Camera" "#camera" >}}
+{{< f/image "international-broadcast-day-demo-sm.jpg" "Demo"   "#demo"   >}}
 </div>
 
 <a id="team"></a>
 
-{{< f/image-fluid  "featured-mxf-live-team.jpg" "MXF Live Team" "showCaption" >}}
+{{< f/image-fluid
+  "featured-mxf-live-team.jpg"
+  "MXF Live Team"
+  "showCaption"
+>}}
 
 <a id="system" ></a>
 
@@ -96,11 +112,19 @@ Use the [contact] form to ask questions and suggestions.
 
 <a id="camera" ></a>
 
-{{< f/image-fluid  "mxf-live-camera.jpg" "MXF Live Demo Camera" "showCaption" >}}
+{{< f/image-fluid
+  "mxf-live-camera.jpg"
+  "MXF Live Demo Camera"
+  "showCaption"
+>}}
 
 <a id="demo" ></a>
 
-{{< f/image-fluid  "international-broadcast-day-2019-demo.jpg" "MXF Live Demo" "showCaption" >}}
+{{< f/image-fluid
+  "international-broadcast-day-demo.jpg"
+  "MXF Live Demo"
+  "showCaption"
+>}}
 
 # Partners
 
@@ -123,7 +147,8 @@ Use the [contact] form to ask questions and suggestions.
          post-production, and other related industries. From low-level software
          development toolkits and video codecs to Avid Media Composer plugins,
          video transcoding engines and AI-powered video processing components,
-         we provide a complete ecosystem of tools to meet ever-changing market needs.
+         we provide a complete ecosystem of tools to meet ever-changing market
+         needs.
       </p>
     </div>
   </div>

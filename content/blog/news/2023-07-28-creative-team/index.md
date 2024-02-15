@@ -9,12 +9,12 @@ featured:    /img/amber-simi.png
 ---
 
 {{< card/media
-      mediaUrl =  "/img/amber-simi.png"
-      mediaOn  =  "left"
-      widthFloat = 0.2
-      credit   =  ""
-      id       =  "amber"
- >}}
+  mediaUrl =  "/img/amber-simi.png"
+  mediaOn  =  "left"
+  widthFloat = 0.3
+  credit   =  ""
+  id       =  "amber"
+>}}
 <!-- markdownlint-disable MD025 -->
 # Making Rex, Insights from our Creative Team
 
