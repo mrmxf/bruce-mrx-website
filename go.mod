@@ -2,10 +2,8 @@ module github.com/google/docsy-example
 
 go 1.21.5
 
+// Golang before v1.21 will fail with the toolchain directive
 toolchain go1.21.6
-
-// Github pipelines don't understand toolchain yet
-// toolchain go1.21.6
 
 require (
 	github.com/FortAwesome/Font-Awesome v0.0.0-20220831210243-d3a7818c253f // indirect

@@ -1,6 +1,10 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Metarex to host
 
+env:
+  vGOLANG: 1.21
+  vHUGO: 0.122.0
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -50,9 +54,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: bark
     env:
-      HUGO_VERSION: 0.122.0
+      HUGO_VERSION: $vHUGO
       BASE_URL: "staging.metarex.media"
     steps:
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "$vGOLANG"
+
       - name: Install Hugo CLI
         run: |
           wget -O \
