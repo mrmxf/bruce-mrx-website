@@ -175,3 +175,17 @@ site:
     url: docs/reference/project/privacy/
     icon: "fab fa-user-shield"
     desc: "metarex.media privacy policy"
+
+history:
+  -
+    version:  v1.3.2
+    codename: NAB-teaser-1
+    note:     autobuild with CI/CD
+  -
+    version:  v1.3.1
+    codename: Christmas 2023
+    note:     results of IBC and links to demos
+  -
+    version:  v1.3.0
+    codename: IBC-2023
+    note:     IBC content for the show

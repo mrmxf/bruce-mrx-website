@@ -10,6 +10,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# global environment
+env:
+  REPO: mrmxf
+  IMAGE: mrx-website
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -128,6 +133,12 @@ jobs:
         run: |
               ls -al ./public
               cat Dockerfile
+      -
+        name: Get website version
+        run: |
+              vWWW=$(cat config/_default/params.yaml | grep "    version:" | head -1 | grep -oE "(v[0-9]+.+)")
+              echo "pushing website version $vWWW"
+              echo "vWWW=$vWWW"  >>   $GITHUB_ENV
 
       -
         name: Build and push
@@ -136,5 +147,5 @@ jobs:
           # important that we use path context otherwise no output!
           context:   .
           push:      true
-          tags:      user/app:latest
+          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vWWW  }}
           platforms: linux/amd64,linux/arm64
