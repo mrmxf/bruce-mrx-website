@@ -18,7 +18,7 @@ clogrc/core
 tmp/*
 !tmp/readme.md
 
-#ignore mac artifacts
+#ignore mac cruft
 **/*/.DS_Store
 .DS_Store
 # IDE files
