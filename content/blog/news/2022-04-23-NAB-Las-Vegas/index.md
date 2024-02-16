@@ -55,7 +55,6 @@ We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 >}}
 
 > The answer to all these questions was **Yes**.
-
 > Time to start figuring out how to make it real...
 
 {{< f/card >}}
