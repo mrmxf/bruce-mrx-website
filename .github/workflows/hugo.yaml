@@ -35,14 +35,14 @@ jobs:
       - name: Bark some context vairables
         run: |
           printf "GitHUB workflow"
-          printf "\nHub: %19s=%s" "github.actor"                      "${{ github.actor }}"
-          printf "\nHub: %19s=%s" "github.ref"                        "${{ github.ref }}"
-          printf "\nHub: %19s=%s" "github.head_ref"                   "${{ github.head_ref }}"
-          printf "\nHub: %19s=%s" "github.repository"                 "${{ github.repository }}"
+          printf "\nHub: %19s  %s" "github.actor"                      "${{ github.actor }}"
+          printf "\nHub: %19s  %s" "github.ref"                        "${{ github.ref }}"
+          printf "\nHub: %19s  %s" "github.head_ref"                   "${{ github.head_ref }}"
+          printf "\nHub: %19s  %s" "github.repository"                 "${{ github.repository }}"
 
           echo ""
-          printf "\nHub: %19s=%s" "github.server_url"                 "${{ github.server_url }}"
-          printf "\nHub: %19s=%s" "runner.temp"                       "${{ runner.temp }}"
+          printf "\nHub: %19s  %s" "github.server_url"                 "${{ github.server_url }}"
+          printf "\nHub: %19s  %s" "runner.temp"                       "${{ runner.temp }}"
           echo ""
 
   # Build job
