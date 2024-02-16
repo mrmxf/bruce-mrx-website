@@ -23,7 +23,7 @@ default:
 bark:
   stage: bark
   script:
-    - printf "GitLab pipeline"
+    - printf "GitLab pipeline\n===============\n"
     - printf "Lab %19s=%s" "\$GITLAB_USER_ID"                      "$GITLAB_USER_ID"
     - printf "Lab %19s=%s" "\$CI_COMMIT_BRANCH"                    "$CI_COMMIT_BRANCH"
     - printf "Lab %19s=%s" "\$GITLAB_USER_LOGIN"                   "$GITLAB_USER_LOGIN"
@@ -49,6 +49,7 @@ bark:
     - printf "Lab %19s=%s" "\$CI_RUNNER_VERSION"                   "$CI_RUNNER_VERSION"
     - printf "Lab %19s=%s" "\$CI_SERVER"                           "$CI_SERVER"
     - printf "Lab %19s=%s" "\$KUBECONFIG"                          "$KUBECONFIG"
+    - echo ""
 
 
 build-pages:
