@@ -93,7 +93,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name:             www-metarex-media
-          path:              ./public
+          path: |
+                ./public
+                Dockerfile
           if-no-files-found: error
           retention-days:    1
 
@@ -120,16 +122,19 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name:   www-metarex-media
-          path:   ./public
 
       -
         name: List the ./public folder
-        run: ls -al ./public
+        run: |
+              ls -al ./public
+              cat Dockerfile
 
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          push: true
-          tags: user/app:latest
+          # important that we use path context otherwise no output!
+          context:   .
+          push:      true
+          tags:      user/app:latest
           platforms: linux/amd64,linux/arm64
