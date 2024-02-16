@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Bark some context vairables
         run: |
-          printf "GitHUB workflow"
+          printf "GitHub workflow"
           printf "\nHub: %19s  %s" "github.actor"                      "${{ github.actor }}"
           printf "\nHub: %19s  %s" "github.ref"                        "${{ github.ref }}"
           printf "\nHub: %19s  %s" "github.head_ref"                   "${{ github.head_ref }}"

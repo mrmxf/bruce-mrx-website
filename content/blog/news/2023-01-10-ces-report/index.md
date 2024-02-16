@@ -8,11 +8,11 @@ tags:        ["project",  "CES", "yellowbasket"]
 ---
 
 {{< card/media
-  mediaUrl =  "featured-ces-logo.png"
-  mediaOn  =  "left"
+  mediaUrl =   "featured-ces-logo.png"
+  mediaOn  =   "left"
   widthFloat = 0.3
-  credit   =  ""
-  id       =  "CES"
+  credit   =   ""
+  id       =   "CES"
 >}}
 
 ### Metaverse and Metadata at CES® 2023
@@ -27,11 +27,11 @@ broken by human interaction.
 <!-- ####################################################################### -->
 
 {{< card/media
-  mediaUrl =  "koenig.png"
-  mediaOn  =  "right"
+  mediaUrl =   "koenig.png"
+  mediaOn  =   "right"
   widthFloat = 0.3
-  credit   =  ""
-  id       =  "koenig"
+  credit   =   ""
+  id       =   "koenig"
 >}}
 
 One of the six most important tech trends nominated by Steve Koenig, VP Research
@@ -51,7 +51,7 @@ now.
 <!-- ####################################################################### -->
 
 {{< card/media
-  url=      "https://www.vimmerse.net/"
+  url =       "<https://www.vimmerse.net/>"
   mediaUrl =  "ces-vimverse.jpg"
   mediaOn  =  "left"
   widthFloat = 0.3
@@ -68,10 +68,10 @@ all sorts of content – for business purposes and entertainment. There were man
 <!-- ####################################################################### -->
 
 {{< card/media
-    alt=      "CES Themes"
-    position= "right"
-    size=     "small"
-    imageUrl= "ces-tech-themes.jpg"
+    alt =      "CES Themes"
+    position = "right"
+    size =     "small"
+    imageUrl = "ces-tech-themes.jpg"
 >}}
 
 The conference session also had Metaverse topics with important speakers and well
@@ -86,9 +86,9 @@ Conference Stream at the Aria conference centre:
 
 * _Hollywood streaming and Metaverse_
 
-where we met a plethora of like minded colleagues, including
-Leslie Shannon - Head of Ecosystem and Trend Scouting for Nokia based in Silicon
-Valley and the author of **[Interconnected Realities](https://www.amazon.com/Interconnected-Realities-Metaverse-Relationship-Technology/dp/1394160844)**:
+where we met a plethora of like minded colleagues, including Leslie Shannon -
+Head of Ecosystem and Trend Scouting for Nokia based in Silicon Valley and the
+author of **[Interconnected Realities]**:
 _How the Metaverse Will Transform Our Relationship to Technology Forever_
 
 {{< /card/media >}}
@@ -101,5 +101,4 @@ are: Closing the gap. Metarex roar!
 
 <!-- ####################################################################### -->
 
-[blog]:     /blog                    "Blog"
-[backers]:  /docs/project/backers/   "Backers"
+[Interconnected Realities]: https://www.amazon.com/Interconnected-Realities-Metaverse-Relationship-Technology/dp/1394160844

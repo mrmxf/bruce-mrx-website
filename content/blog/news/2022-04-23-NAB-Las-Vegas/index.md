@@ -39,23 +39,15 @@ We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 
 {{< f/cards >}}
 {{< f/card
-  id       =  "logo"
-  src =  "/img/dino/mrx-logo.svg"
-  srcOn  =  "left"
-  srcWRatio = 0.1
-  credit   =  ""
-  id="cardID anchors"
-  description="Body Text" | none"
-  src="image/video/"
-  srcId="media-id"
-  srcClickUrl="/some/page"
-  imgClass="mini | small | medium etc"
-  header="Header text
-  meta="Meta below heading"
+  id =           "cardID anchors"
+  src =          "/img/dino/mrx-logo.svg"
+  srcOn =        "left"
+  srcWRatio =    0.1
+  description = "Body Text"
 >}}
 
 > The answer to all these questions was **Yes**.
 > Time to start figuring out how to make it real...
 
-{{< f/card >}}
+{{</ f/card >}}
 {{</ f/cards >}}
