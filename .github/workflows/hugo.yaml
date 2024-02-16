@@ -148,5 +148,5 @@ jobs:
           # important that we use path context otherwise no output!
           context:   .
           push:      true
-          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vWWW  }}
+          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:v1.3.2
           platforms: linux/amd64,linux/arm64
