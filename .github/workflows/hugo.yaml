@@ -57,7 +57,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version-file: 'go.mod'
+          go-version-file: '${{ github.workspace }}/go.mod'
 
       - name: Install Hugo CLI
         run: |
