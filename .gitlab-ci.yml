@@ -6,13 +6,47 @@ variables:
   GIT_STRATEGY: clone
   GIT_SUBMODULE_STRATEGY: recursive
   TZ: Europe/London
+  PROJECT: www-metarex-media
+  REPO:    mrmxf
 
 stages:
+  - bark
   - hugo
   - docker
   - test
   - deploy
   - hook
+
+default:
+  image: golang:1.20.6-bookworm
+
+bark:
+  stage: bark
+  script:
+    - print "%19s=%s" "\$GITLAB_USER_ID"                      "$GITLAB_USER_ID"
+    - print "%19s=%s" "\$CI_COMMIT_BRANCH"                    "$CI_COMMIT_BRANCH"
+    - print "%19s=%s" "\$GITLAB_USER_LOGIN"                   "$GITLAB_USER_LOGIN"
+    - echo ""
+    - print "%19s=%s" "\$GITLAB_USER_EMAIL"                   "$GITLAB_USER_EMAIL"
+    - print "%19s=%s" "\$GITLAB_USER_NAME"                    "$GITLAB_USER_NAME"
+    - print "%19s=%s" "\$CI_PIPELINE_SOURCE"                  "$CI_PIPELINE_SOURCE"
+    - print "%19s=%s" "\$CI_MERGE_REQUEST_ID"                 "$CI_MERGE_REQUEST_ID"
+    - print "%19s=%s" "\$GITLAB_USER_LOGIN"                   "$GITLAB_USER_LOGIN"
+    - print "%19s=%s" "\$CI_MERGE_REQUEST_APPROVED"           "$CI_MERGE_REQUEST_APPROVED"
+    - print "%19s=%s" "\$CI_MERGE_REQUEST_LABELS"             "$CI_MERGE_REQUEST_LABELS"
+    - print "%19s=%s" "\$CI_MERGE_REQUEST_REF_PATH"           "$CI_MERGE_REQUEST_REF_PATH"
+    - print "%19s=%s" "\$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME" "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
+    - print "%19s=%s" "\$CI_BUILDS_DIR"                       "$CI_BUILDS_DIR"
+    - print "%19s=%s" "\$CI_COMMIT_DESCRIPTION"               "$CI_COMMIT_DESCRIPTION"
+    - print "%19s=%s" "\$CI_COMMIT_TAG"                       "$CI_COMMIT_TAG"
+    - print "%19s=%s" "\$CI_JOB_STAGE"                        "$CI_JOB_STAGE"
+    - print "%19s=%s" "\$CI_JOB_TOKEN"                        "$CI_JOB_TOKEN"
+    - print "%19s=%s" "\$CI_PIPELINE_NAME"                    "$CI_PIPELINE_NAME"
+    - print "%19s=%s" "\$CI_PROJECT_DIR"                      "$CI_PROJECT_DIR"
+    - print "%19s=%s" "\$CI_PROJECT_PATH"                     "$CI_PROJECT_PATH"
+    - print "%19s=%s" "\$CI_RUNNER_VERSION"                   "$CI_RUNNER_VERSION"
+    - print "%19s=%s" "\$CI_SERVER"                           "$CI_SERVER"
+    - print "%19s=%s" "\$KUBECONFIG"                          "$KUBECONFIG"
 
 
 build-pages:
@@ -51,16 +85,19 @@ build-pages:
 
 build-docker:
   stage: docker
+  needs: [build-pages]
   script:
     - echo "$GITLAB_USER_LOGIN - build the Docker image(s)"
 
 test-job1:
   stage: test
+  needs: [build-docker]
   script:
     - echo "Should probably test something here"
 
 test-job2:
   stage: test
+  needs: [build-docker]
   script:
     - echo "This job tests something else, but takes more time than test-job1."
     - echo "After the echo commands complete, it runs the sleep command for 20 seconds"
@@ -69,6 +106,7 @@ test-job2:
 
 deploy-prod:
   stage: deploy
+  needs: [test, test2]
   script:
     - echo "push the image to docker"
     - docker login -u $DOCKER_USR --password-stdin <<<$DOCKER_PWD
@@ -78,5 +116,6 @@ deploy-prod:
 
 hook-website:
   stage: hook
+  needs: [deploy-prod]
   script:
     - echo "fire the hook to the wesbite"
