@@ -1,0 +1,23 @@
+{{/* --- nab24-card -----------------------------------------------------------
+Params {position}:
+_____header {0}: "DemoName"
+_______meta {1}: "Subtitle"
+___mediaUrl {2}: "/img/backer/signiant-logo.png"
+description {3}: "some text that comes before .Inner"
+*/}}
+{{- $header := .Get 0 -}}{{ with .Get "header" }}{{ $header = . }}{{- end -}}
+{{- $meta := .Get 1 -}}{{ with .Get "meta" }}{{ $meta = . }}{{- end -}}
+{{- $mediaUrl := .Get 2 -}}{{ with .Get "mediaUrl" }}{{ $mediaUrl = . }}{{- end -}}
+{{- $description := .Get 3 -}}{{ with .Get "description" }}{{ $description = . }}{{- end -}}
+<div class="card">
+  <div class="image" style="background-color:#AAAAAA;">
+    <img src="{{ $mediaUrl }}" />
+  </div>
+  <div class="content">
+    {{- with $header }}<div class="header">{{ . }}</div>{{ end -}}
+    {{- with $meta }}<div class="meta">{{ . }}</div>{{ end -}}
+    <div class="description">
+      {{ $description }}{{- .Inner -}}
+    </div>
+  </div>
+</div>

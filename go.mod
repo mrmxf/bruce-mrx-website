@@ -1,4 +1,4 @@
-module github.com/google/docsy-example
+module github.com/metarex-media/mrx-website
 
 go 1.21.5
 
