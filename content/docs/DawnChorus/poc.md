@@ -1,7 +1,7 @@
 ---
 title:       Dawn Chorus PoC
 linkTitle:   Dawn Chorus PoC
-date:        2024-02-20
+date:        2024-02-21
 description: The Dawn Chorus Proof of Concept Specification
 author:      Bruce Devlin
 tags:        ["dawn chorus", "PoC"]
@@ -12,51 +12,74 @@ weight:      199
 
 ## Proof of Concept
 
-# Vero spectante pecus
+The Proof of Concept will achieve the following:
 
-## Iecur video abdita quis nec
+1. Show the system works
+2. Create an audio experience for a single recording for a single location
+3. Provide information to estimate on:
+   1.1 the number of AudioMoths devices needed for a given area
+   1.2 the accuracy of frequency and phase lock needed between AudioMoths
+   1.3 the accuracy of achievable GPS sync using the chirp method
+   1.4 the accuracy of the sound source algorithms available
+   1.5 the quality of ambient sound suppression available
+   1.6 the immersivity of headphone & speaker test environments
 
-Lorem markdownum premit Erigonen visus usquam tarde, damnatura caeruleus breve.
-Fore unaque, cantare illa omnemque caecoque. Huc hunc calathosque hosti glans
-vivunt stimulosque esse. Est erat concidere est carmine novat.
+### 1. Equipment
 
-- Orbem Ciris
-- Stetit putas advertere saevo
-- Norint indignave quondam inerti domestica draconem silet
+The PoC will be performed at least twice in at least 2 locations providing at
+least 4 different recorded environments.
 
-## Sorores accepto vidit
+* 3 pods containing
+   * AudioMoth recorders (preferably GPS locked)
+   * metarex GPS, temperature & humidity recorders (one per AudioMoth)
+   * Battery power
+   * Memory cards to cover the duration of the recording (30m)
 
-Dabat fuga *equorum*, haerebat consulat et *altam quondam*. Tertius Acesten
-ilia, facit usus et genibusque [quid](http://est.net/non-deus) vulgata illic, in
-voragine vetat his enim.
+### 2. Setup
 
-1. Pressum eratis more vulnus cervix
-2. Fuit corpus sacris Iuppiter petit in effectu
-3. Numina umbrosa omina ubi
-4. Quantum concipiunt feri
+Lab tests will be performed to determine a synchronisation mechanism to lock
+the devices to the GPS signal. The current idea is for each metarex pod to
+emit a modulated frequency sweep that can be recorded by all the pods. The
+chirp will identify the pod and the metarex GPS recorder will record the GPS
+time of the emitted chirp.
 
-Naturam intervenit Teucer Aeson, conlectus, tigres mihi ullus auratis, dubium
-vestigia silvas sermonibus. Herses dum aut terra **et sufficit** femina, Iove,
-marmore quodque. Quod vicibus manifesta sub ut pennisque nec nox mea sed cruore,
-foedaque Priamus Narcissum obuncis Hesperio, **Maeoniaeque**. Credere arbor his,
-fera hanc [pectore](http://ungues.com/), quae; quem rerum pectus celebrabat
-vitio, gentis Hippodamas vivit fecundior.
+Software testing should enable the identification and synchronisation of the
+pods to be evaluated until a reasonable accuracy can be achieved.
 
-## Qua videt
+### 3. Recording
 
-Petii curvi, ait, matutinaeque videres. Est erat fixum Thebis illam, Venere mihi
-flavescere forem et. Iove clipei sapiens ictus.
+The recordings will run for around 30 minutes for each proof of concept and
+will result in 3 streams of audio data and 3 streams of metadata for each
+recording.
 
-- Et quod in densas solari furca
-- Quos supraque
-- Dies longi ligno dis quaeritur vinci circumlitus
-- Laeta leonem
-- Stetimusque plurima
-- Est penates parte plebe
+### 4. Post processing
 
-Fuit Pyracmon Somni est missus coniugis Festa tumidaeque habet, effuso. Quis ad
-visum distabat tela, dum hos auxilium, pulchra inposuit interdum arida carmine,
-non tota [est](http://iungere-terras.org/). In *ille* sonantia detrahit ferentes
-nuper quo non omnes facis nondum amor flexus.
+Post processing of the result will attempt to isolate sound sources and to plot
+graphs giving metrics for the numbered requirements.
+
+### 5. Results
+
+The preliminary results will be restricted and made available to project
+participants for evaluation on the metarex website. If the results are signed
+off by the participants, these results will be made publicly available.
+
+### 6. Timeline (time (T) measured in weeks)
+
+1. {**T**=_0_} Hardware & Funding available
+2. {**T**+_5_} pods constructed and setup complete
+3. {**T**+_6_} recording complete
+4. {**T**+_10_} post processing complete
+5. {**T**+_13_} preliminary results review period
+5. {**T**+_15_} results published & phase 2 documented
+
+### 7. Provisional costs
+
+```text
+Metarex:
+  £3000  4wk   Full time engineering @ £150/day
+  £ 450  3off  AudioMoth
+  £ 225  3off  Metarex GPS kits
+  £150   1off  AWS processing fees (estimate)
+```
 
 {{% sitelinks %}}
