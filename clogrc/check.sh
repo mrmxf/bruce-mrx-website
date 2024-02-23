@@ -10,9 +10,6 @@ CHECK_ALREADY_SOURCED=YES
 [ -f clogrc/_inc.sh   ] && source clogrc/_inc.sh    # helper functions
 [ -f clogrc/common.sh ] && source clogrc/common.sh  # helper functions
 
-fPrompt "${cC}Check$cT    Project$cS $PROJECT$cT on $cI$bCPU $bOSV$cX?" "Yn" 6
-[ $? -gt 0 ] && return 0    # yes was selected
-
 printf "${cC}Checking$cT Project$cS $PROJECT$cT on $cI$bCPU $bOSV$cX\n"
 
 ignoreErrs=""; [[ "$1" == "ignore-errors" ]] && ignoreErrs="YES"
@@ -78,29 +75,14 @@ done
 
 if [[ "$vLOCAL" != "$vREF" ]] && [[ -z "$noFix" ]]; then
   printf "${cT}ref tag (${cW}$vREF$cX) != local tag  (${cW}$vLOCAL$cX)\n"
-  fPrompt "${cT}Tag$cS $PROJECT$cT locally @ $vREF?$cX" "yN" 6
-  if [ $? -eq 0 ] ; then # yes was selected
-    printf "Tagging local with $vREF.\n"
-    fTagLocal "$vREF" "matching tag to release ($vREF)"
-    [ $? -gt 0 ] && printf "${cE}Abort$cX\n" && exit 1
-    vLOCAL=$(git tag | tail -1)
-  fi
+  printf "Suggest tagging local with $vREF.\n"
 fi
 
 # --- head tag fixup ---------------------------------------------------------
 
 if [[ "$vHEAD" != "$vREF" ]] && [[ -z "$noFix" ]]; then
   printf "${cT}ref tag (${cW}$vREF$cX) != head tag  (${cW}$vHEAD$cX)\n"
-  fPrompt "${cT}delete local tag$cS $PROJECT$cT & re-tag to HEAD$cX" "yN" 6
-  if [ $? -eq 0 ] ; then # yes was selected
-    printf "Deleting local tag $vLOCAL.\n"
-    git tag -d $vLOCAL
-    [ $? -gt 0 ] && printf "${cE}Abort$cX\n" && exit 1
-    printf "Re-tagging HEAD with $vREF.\n"
-    fTagLocal "$vREF" "matching tag to release ($vREF)"
-    [ $? -gt 0 ] && printf "${cE}Abort$cX\n" && exit 1
-    vLOCAL=$(git tag | tail -1)
-  fi
+  printf "${cT}suggest delete local tag$cS $PROJECT$cT & re-tag to HEAD$cX" "yN" 6
 fi
 
 # --- remote tag fixup --------------------------------------------------------
@@ -108,23 +90,13 @@ fi
 if [[ ( "$vHEAD" == "$vREF" ) && ( "$vREPO" != "$vREF" ) ]]  && [[ -z "$noFix" ]] ; then
   printf "${cT}ref tag ($cW%s$cX) != head tag ($cW%s$cX) or " "$vREF" "$vHEAD"
   printf "${cT}ref tag ($cW%s$cX) != remote tag ($cW%s$cX)\n" "$vREF" "$vREPO"
-  fPrompt "${cT}Push$cS $PROJECT$cT to origin @ $vREF?$cX" "yN" 6
-  if [ $? -eq 0 ] ; then # yes was selected
-    printf "Pushing $vREF to origin.\n"
-    fTagRemote "$vREF"
-    [ $? -gt 0 ] && printf "${cE}Abort$cX\n" && exit 1
-  fi
+  printf "${cT}suggest push$cS $PROJECT$cT to origin @ $vREF?$cX" "yN" 6
 else
   # local and remote tags match but do they point to the right repo?
   if [[ "$hashLOCAL" != "$hashREPO" ]] ; then
     printf "${cW}Signature mismatch $cS$vREF$cT "
     printf "local($cI%s$cT) != repo($cW%s$cT)\n" "${hashLOCAL:0:8}" "${hashREPO:0:8}"
-    fPrompt "${cT}Delete remote tag $cW$vREF?$cX" "yN" 6
-  if [ $? -eq 0 ] ; then # yes was selected
-    printf "Deleting remote tag $vREF with$cC git push origin :refs/tags/$vREF$cX.\n"
-    git push origin :refs/tags/$vREF
-    [ $? -gt 0 ] && printf "${cE}Abort$cX\n" && exit 1
-  fi
+    printf "${cT}Suggest delete remote tag $cW$vREF?$cT then git push origin :refs/tags/$vREF$cX"
   fi
 fi
 

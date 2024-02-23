@@ -7,7 +7,7 @@
 #  |_.__/  \_,_| |_| |_| \__,_|   |_||_|  \_,_| \__, | \___/
 #                                               |___/
 source <(clog Inc)
-[ -f clogrc/_inc.sh   ] && source clogrc/_inc.sh    # helper functions
+[ -f clogrc/check.sh   ] && source clogrc/check.sh  "ignore-errors"
 
 CMD="rm -fr public/*"
 fInfo "purging old builds:  $ $cC$CMD$cX"
