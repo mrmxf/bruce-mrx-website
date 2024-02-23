@@ -82,7 +82,7 @@ fi
 
 if [[ "$vHEAD" != "$vREF" ]] && [[ -z "$noFix" ]]; then
   printf "${cT}ref tag (${cW}$vREF$cX) != head tag  (${cW}$vHEAD$cX)\n"
-  printf "${cT}suggest delete local tag$cS $PROJECT$cT & re-tag to HEAD$cX" "yN" 6
+  printf "${cT}suggest delete local tag$cS $PROJECT$cT & re-tag to HEAD$cX\n"
 fi
 
 # --- remote tag fixup --------------------------------------------------------
@@ -90,14 +90,23 @@ fi
 if [[ ( "$vHEAD" == "$vREF" ) && ( "$vREPO" != "$vREF" ) ]]  && [[ -z "$noFix" ]] ; then
   printf "${cT}ref tag ($cW%s$cX) != head tag ($cW%s$cX) or " "$vREF" "$vHEAD"
   printf "${cT}ref tag ($cW%s$cX) != remote tag ($cW%s$cX)\n" "$vREF" "$vREPO"
-  printf "${cT}suggest push$cS $PROJECT$cT to origin @ $vREF?$cX" "yN" 6
+  printf "${cT}suggest push$cS $PROJECT$cT to origin @ $vREF?$cX\n"
 else
   # local and remote tags match but do they point to the right repo?
   if [[ "$hashLOCAL" != "$hashREPO" ]] ; then
-    printf "${cW}Signature mismatch $cS$vREF$cT "
+    printf "${cW}Signature mismatch $cS$vREF$cT \n"
     printf "local($cI%s$cT) != repo($cW%s$cT)\n" "${hashLOCAL:0:8}" "${hashREPO:0:8}"
-    printf "${cT}Suggest delete remote tag $cW$vREF?$cT then git push origin :refs/tags/$vREF$cX"
+    printf "${cT}Suggest delete remote tag $cW$vREF?$cT then git push origin :refs/tags/$vREF$cX\n"
   fi
+fi
+# --- check for local theme ---------------------------------------------------
+
+configFile="config/_default/module.yaml"
+isLocalTheme=$(cat $configFile | grep -Eon "^replacements")
+if [ -n "$isLocalTheme" ]; then
+  linenumber=$(echo $isLocalTheme | sed 's/:.*//')
+  printf "${cE}ERROR$cT Local Theme is$cE not$cT commented out in $cF$configFile$cX\n"
+  printf "${cT}suggest update with $cW#replacements$cT in line $cW$linenumber$cT of $cF$configFile $cX\n"
 fi
 
 # --- environemnt variables ---------------------------------------------------
