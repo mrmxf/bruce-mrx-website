@@ -6,7 +6,8 @@
 #  | '_ \ | || | | | | | / _` |   | ' \  | || | / _` | / _ \
 #  |_.__/  \_,_| |_| |_| \__,_|   |_||_|  \_,_| \__, | \___/
 #                                               |___/
-source clogrc/core/inc.sh
+source <(clog Inc)
+[ -f clogrc/_inc.sh   ] && source clogrc/_inc.sh    # helper functions
 
 CMD="rm -fr public/*"
 fInfo "purging old builds:  $ $cC$CMD$cX"
@@ -17,11 +18,11 @@ if [ -z "$TAG" ] ; then
   fWarning "No recent tag found using tag$cE dev"
   TAG=dev
 fi
-CONTAINER="mrmxf/mrx-static"
+CONTAINER="mrmxf/mrx-website"
 GREP_SEARCH="mrx"
 
 fInfo "$cC hugo"
-hugo
+hugo --gc --minify
 echo "hugo returned $?"
 [[ $? > 0 ]] && fnError "hugo build failed" && exit 1
 
@@ -32,5 +33,5 @@ docker build -t "$CONTAINER:$TAG" .
    fnError "Build failed -$cE only$cT the images above exist"\
    exit 1
 
-fInfo "Test: docker run -d -p 11999:80 $cF$CONTAINER:$cE$TAG$cX"
+fInfo "Test: docker run -d -rm -p 11999:80 $cF$CONTAINER:$cE$TAG$cX"
 fInfo "Next: docker push $cF$CONTAINER:$cE$TAG$cX"
