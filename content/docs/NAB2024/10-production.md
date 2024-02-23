@@ -17,6 +17,5 @@ Key points:
 * Web Service (metarex enabled) to synthesise svg ok/err icons
 * Dashboard mockup to show status
 
-{{% include 10-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}

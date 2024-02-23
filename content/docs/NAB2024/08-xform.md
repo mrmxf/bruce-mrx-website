@@ -13,6 +13,5 @@ Key points:
 
 * regXML an MRX file and validate with regJSON
 
-{{% include 08-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}

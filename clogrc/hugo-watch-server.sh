@@ -7,13 +7,16 @@
 #
 source <(clog Inc)
 
-CMD="hugo server --buildDrafts --environment staging"
-fnInfo "running $cC$CMD$cX\n"
+
 PORT=1313
-# launch browser
+fInfo "launching browser"
 cmd.exe /C start http://localhost:$PORT
-# start server with most reliable (but slow) options --noHTTPCache
+
+fInfo "running$cC hugo$cT server"
+
+# start server with most reliable (but slow) options
+# other options
 hugo server -p $PORT --watch \
-           --buildDrafts --buildExpired --buildFuture \
+           --buildDrafts --buildExpired --buildFuture  --noHTTPCache \
            --disableFastRender --forceSyncStatic --enableGitInfo \
            --templateMetrics --templateMetricsHints

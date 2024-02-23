@@ -53,12 +53,20 @@ markup:
       unsafe: true
 
   highlight:
-    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
-    style: "tango"
     # Uncomment if you want your chosen highlight style used for code blocks without a specified language
     # THIS MUST BE FALSE for mermaid to work!!!
-    guessSyntax: false
-
+    guessSyntax:        false
+    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+    style:              vs
+    anchorLineNos:      false
+    codeFences:         true
+    lineAnchors:        ""
+    # hl_Lines:           1
+    # lineNoStart:        1
+    lineNos:            true
+    lineNumbersInTable: true
+    noClasses:          true
+    tabWidth:           2
 # ------------------------------------------------------------------------------
 # Everything below this are Site Params
 

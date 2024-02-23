@@ -4,8 +4,10 @@ Load yaml from data/nab2024 and use the `demo` object to render the cards
 
 */}}
 {{- $demoNumber := (math.Sub (.Get 0) 1) -}}
+{{- $demoPartial := printf "nab2024/%02d-demo" (.Get 0) -}}
 {{- $cOuter := "purple" -}}
 {{- $cDescription := "orange" -}}
+{{- $cDemo := "blue" -}}
 {{- $title := "none" -}}
 {{- $meta := "none" -}}
 {{- $img := "none" -}}
@@ -20,10 +22,16 @@ Load yaml from data/nab2024 and use the `demo` object to render the cards
   <div class="header">{{ $title }}</div>
  </h1>
  <div class="meta">{{ $meta }}</div>
+ {{/* -------------------------------------------------------------------- */}}
  <div class="ui {{$cDescription}} segment">
   <div class="description">
    <img src="{{ $img }}" class="ui left floated small image" />
    {{- .Inner -}}
   </div>
+ </div>
+ {{/* -------------------------------------------------------------------- */}}
+ <div class="ui {{$cDemo}} segment">
+  {{ partial $demoPartial (dict "demoPartial" $demoPartial) }}
+  {{/*  $demoPartial */}}
  </div>
 </div>

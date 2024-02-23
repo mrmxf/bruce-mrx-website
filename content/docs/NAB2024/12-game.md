@@ -16,6 +16,5 @@ Key points:
 * Samples from
   * Graymeta
 
-{{% include 12-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}

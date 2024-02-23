@@ -1,17 +1,37 @@
 ---
-title:       Dawn Chorus PoC
-linkTitle:   Dawn Chorus PoC
+title:       Dawn Chorus Phase 2
+linkTitle:   Dawn Chorus Phase 2
 date:        2024-02-21
-description: The Dawn Chorus Proof of Concept Specification
+description: The Dawn Chorus Phase 2 Specification
 author:      Bruce Devlin
-tags:        ["dawn-chorus", "poc"]
+tags:        ["dawn-chorus", "phase-2"]
 weight:      199
 ---
 
-{{% banner "Dawn Chorus Proof Of Concept Proposal." %}}
+{{% banner "Dawn Chorus Phase 2." %}}
 
-## Proof of Concept
+## Dawn Chorus Phase 2
 
+Program Pods on laptop
+stakes / poles
+volunteers
+instructions for getting setup
+instructions for validating setup
+instructions for recording
+instructions for recording validation
+instructions for submitting content to Dawn Chorus platform
+instruction for validating the resulting streams
+
+picture mapping pods to sound fields & resulting experience
+Hardware for metarex - design &
+
+app cost - write requirements
+
+Describe the in-hall entertainment setup & listening results - tangible
+
+
+
+- - - - - - - -
 The Proof of Concept will achieve the following:
 
 1. Show the system works

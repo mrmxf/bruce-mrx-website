@@ -14,7 +14,5 @@ Key points:
 * 8k image at rest - media playback at low res
 * Associated metadata overlaid
 
-
-{{% include 09-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}
