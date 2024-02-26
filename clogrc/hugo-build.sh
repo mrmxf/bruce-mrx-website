@@ -33,5 +33,6 @@ docker build -t "$CONTAINER:$TAG" .
    fnError "Build failed -$cE only$cT the images above exist"\
    exit 1
 
-fInfo "Test: docker run -d -rm -p 11999:80 $cF$CONTAINER:$cE$TAG$cX"
-fInfo "Next: docker push $cF$CONTAINER:$cE$TAG$cX"
+fInfo "1. docker run --detach --rm --publish 11999:80 --name $cW mrx-clog $cF$CONTAINER:$cE$TAG$cX"
+fInfo "1. docker stop$cW mrx-clog$cX"
+fInfo "3. [optional] docker push $cF$CONTAINER:$cE$TAG$cX"

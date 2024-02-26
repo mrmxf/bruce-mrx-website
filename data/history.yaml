@@ -1,5 +1,9 @@
 history:
   -
+    version:  v1.3.4
+    codename: NAB-teaser-3
+    note:     fixed HTML typos, more content on demo pages
+  -
     version:  v1.3.3
     codename: NAB-teaser-2
     note:     autobuild with CI/CD
