@@ -11,6 +11,6 @@ source clogrc/core/inc.sh
 fInstall "hugo"
 
 CMD="hugo server --buildDrafts --environment staging"
-fnInfo "running$cC$CMD$cX"
+fInfo "running$cC$CMD$cX"
 
 hugo server --buildDrafts --environment staging

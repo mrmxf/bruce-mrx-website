@@ -23,13 +23,13 @@ GREP_SEARCH="mrx"
 fInfo "$cC hugo"
 hugo
 echo "hugo returned $?"
-[[ $? > 0 ]] && fnError "hugo build failed" && exit 1
+[[ $? > 0 ]] && fError "hugo build failed" && exit 1
 
 fInfo "$cC docker build $cF$CONTAINER:$cE$TAG$cX"
 docker build -t "$CONTAINER:$TAG" .
 
 [[ $? > 0 ]] && docker images | grep "$GREP_SEARCH" &&\
-   fnError "Build failed -$cE only$cT the images above exist"\
+   fError "Build failed -$cE only$cT the images above exist"\
    exit 1
 
 fInfo "Test: docker run -d -p 11999:80 $cF$CONTAINER:$cE$TAG$cX"

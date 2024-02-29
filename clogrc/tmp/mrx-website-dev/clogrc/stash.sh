@@ -41,6 +41,6 @@ git commit -m "Stashing clogrc"
 git remote set-url origin https://$GHUSR:$GHGIST@gist.github.com/$CLOG_STASH_ID.git
 git push origin main
 cd ..
-fnInfo Added $cF$PROJECT_ZIP$cT to stash Gist
+fInfo Added $cF$PROJECT_ZIP$cT to stash Gist
 # don't add a * to the rm line otherwise hidden folders will persist
 #rm -rf $CLOG_STASH_ID/

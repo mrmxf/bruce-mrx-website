@@ -7,15 +7,15 @@ source clogrc/core/installers.sh
 ## this script is included to test if the install process has taken place
 
 #install hugo if needed
-fnInfo "checking$cC hugo$cT installaion"
+fInfo "checking$cC hugo$cT installaion"
 fInstall "hugo"
 
 # check that the postcss is all installed
-fnInfo "checking$cC postcss$cT installaion"
+fInfo "checking$cC postcss$cT installaion"
 $(cd themes/fohuw && yarn)
 
 #check tht the top level postcss is installed
-fnInfo "checking$cC javascript build$cT installaion"
+fInfo "checking$cC javascript build$cT installaion"
 yarn
 CMD="hugo server --buildDrafts --environment staging"
 
