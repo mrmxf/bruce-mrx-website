@@ -55,5 +55,6 @@
         "workplan",
         "Zeko"
     ],
-    "workbench.colorTheme": "Default Light+"
+    "workbench.colorTheme": "Default Light+",
+    "frontMatter.content.pageFolders": []
 }
