@@ -7,7 +7,7 @@ author:      Bruce Devlin
 tags:        ["signiant", "PoC"]
 ---
 
-{{% nab24-demo 1 %}}
+{{< nab24-demo 1 >}}
 
 #### Concept
 
@@ -22,7 +22,7 @@ metadata from the live event to be automatically:
 
 Key Points:
 
-* IMF QC report & LPX data moved in {{% metarex %}} container
+* IMF QC report & LPX data moved in {{< metarex >}} container
 * Web Service (metarex core) to validate documents
 * Web Service (metarex enabled) to check QC status
 * Web Service (metarex enabled) to synthesise svg icons
@@ -31,6 +31,5 @@ Key Points:
 
 [LPX]:   https://app.swaggerhub.com/apis/Arqiva/lpx-api/3.0
 
-{{% include 02-demo-segment.html %}}
-{{% sitelinks %}}
-{{% /nab24-demo %}}
+{{< sitelinks >}}
+{{< /nab24-demo >}}
