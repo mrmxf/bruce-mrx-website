@@ -9,9 +9,13 @@ tags:        ["tools"]
 
 {{% nab24-demo 3 %}}
 
+**Dawn Chorus** is a community project based in Hammersmith UK that records
+birdsong with multiple data loggers and then uses {{% metarex %}} metadata
+processing to create an immersive audio experience using Dolby Atmos. You
+can enjoy the audio from individual birds using headphones or speakers. Project
+is starting in 2024 with a final performance of the audio in late **2025**.
 
-<img alt="Dawn Chorus" src="/img/dawn/mrx-chorus-process.png" class="ui fluid image">
+Banana
 
-{{% include 03-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}
