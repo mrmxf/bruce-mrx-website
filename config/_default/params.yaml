@@ -92,6 +92,7 @@ github_project_repo: https://github.com/metarex-media
 # or specify a new value if you want to reference another branch in your GitHub links
 github_branch: main
 
+# ------------------------------------------------------------------------------
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 # gcs_engine_id: "d72aa9b2712488cc3"
 
@@ -101,6 +102,7 @@ algolia_docsearch: false
 # Enable Lunr.js offline search
 offlineSearch: false
 
+# ------------------------------------------------------------------------------
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting: true
 
@@ -175,17 +177,3 @@ site:
     url: docs/reference/project/privacy/
     icon: "fab fa-user-shield"
     desc: "metarex.media privacy policy"
-
-history:
-  -
-    version:  v1.3.2
-    codename: NAB-teaser-1
-    note:     autobuild with CI/CD
-  -
-    version:  v1.3.1
-    codename: Christmas 2023
-    note:     results of IBC and links to demos
-  -
-    version:  v1.3.0
-    codename: IBC-2023
-    note:     IBC content for the show

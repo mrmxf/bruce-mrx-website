@@ -17,6 +17,10 @@ enableGitInfo: true
 # Comment out to enable taxonomies in Docsy
 # disableKinds: ["taxonomy", "taxonomyTerm"]
 
+# ignore `tmp-` files in /content /data & i*ln
+ignoreFiles:
+- \.tmp-$
+
 # You can add your own taxonomies
 taxonomies:
   tag: tags
