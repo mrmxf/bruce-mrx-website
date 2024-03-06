@@ -1,7 +1,7 @@
 ---
-title:       Auto Proxy
-linkTitle:   Auto Proxy
-date:        2024-02-21
+title:       No Proxy UHD
+linkTitle:   No Proxy UHD
+date:        2024-03-06
 description: Smart Content at res
 author:      Bruce Devlin
 tags:        ["tools"]

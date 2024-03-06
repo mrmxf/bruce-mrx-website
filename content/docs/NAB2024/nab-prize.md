@@ -7,8 +7,6 @@ author:      Bruce Devlin
 tags:        ["tools"]
 ---
 
-{{% nab24-demo 12 %}}
-
 Key points:
 
 * modified RNF demo showing ELT workflow
@@ -17,4 +15,3 @@ Key points:
   * Graymeta
 
 {{% sitelinks %}}
-{{% /nab24-demo %}}

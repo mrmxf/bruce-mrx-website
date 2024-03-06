@@ -1,7 +1,7 @@
 ---
-title:       Identity
-linkTitle:   Identity
-date:        2024-02-21
+title:       Hand Identity
+linkTitle:   Hand Identity
+date:        2024-03-06
 description: Who's face is it anyway?
 author:      Bruce Devlin
 tags:        ["tools"]

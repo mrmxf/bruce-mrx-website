@@ -1,8 +1,8 @@
 demo:
   -
     number:      1
-    title:       Flight Deck Metadata
-    description: Dynamic visualization of metadata
+    title:       Scheduled Cloud Ingest with Jet
+    description: with dynamic visualization of metadata
     imageUrl:    /img/backer/signiant-logo.png
     detailUrl:   01-signiant
     body: |
@@ -21,7 +21,7 @@ demo:
     number:      3
     title:       Dawn Chorus
     description: Immersive Audio recording
-    imageUrl:    /img/dawn/dawn-chorus-small.png
+    imageUrl:    /03dawn/dawn-chorus-small.png
     detailUrl:   03-dawnchorus
     body: |
       Add {{%metarex%}} to precision audio field recordings for a unique Dolby
@@ -48,7 +48,7 @@ demo:
     title:       Virtual production
     description: Manage OSVP networked data
     imageUrl:    /img/backer/smpte-logo.svg
-    detailUrl:   06-osvp
+    detailUrl:   06-smpte
     body: |
       Saving time and money with the common {{%metarex%}} container.
   -
@@ -56,7 +56,7 @@ demo:
     title:       Production Monitoring
     description: No Code visualization
     imageUrl:    /img/backer/tagvs-logo.png
-    detailUrl:   07-monitoring
+    detailUrl:   07-tag
     body: |
       Easy customization & visualization of Metadata.
   -
@@ -64,7 +64,7 @@ demo:
     title:       Extract Load Transform
     description: Auto Connector generation
     imageUrl:    /img/backer/metaglue-logo.png
-    detailUrl:   08-xform
+    detailUrl:   08-etl
     body: |
       Auto-normalizing and validation of metadata for different MAM and DAM
       systems with {{%metarex%}}.
@@ -79,10 +79,10 @@ demo:
       with {{%metarex%}}.
   -
     number:      10
-    title:       News Production
-    description: Versatility with Microservices
+    title:       Live News
+    description: LPX Versatility with Microservices
     imageUrl:    /img/backer/nxtedition-logo.svg
-    detailUrl:   10-production
+    detailUrl:   10-nxt
     body: |
       Lossless normalization of metadata using {{%metarex%}} for news, avails
       and more.
@@ -91,7 +91,7 @@ demo:
     title:       Identity
     description: Who's face is it anyway?
     imageUrl:    /img/backer/hand-logo.svg
-    detailUrl:   11-identity
+    detailUrl:   11-hand
     body: |
       Search the HAND database and control the formats that you need for your
       workflow {{%metarex%}}.
@@ -100,7 +100,7 @@ demo:
     title:       Win a prize
     description: 2 hr free metadata consultancy
     imageUrl:    /img/dino/mrx-logo.svg
-    detailUrl:   12-game
+    detailUrl:   12-rnf
     body: |
       Win a 2 hr free metadata consultancy with Executive
       Director of {{%metarex%}}, **Bruce Devlin**.

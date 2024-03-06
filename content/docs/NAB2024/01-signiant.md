@@ -1,7 +1,7 @@
 ---
 title:       Cloud Ingest with Jet
 linkTitle:   Cloud Ingest with Jet
-date:        2024-02-20
+date:        2024-03-06
 description: Dynamic Flight Deck Media
 author:      Bruce Devlin
 tags:        ["signiant", "PoC"]
@@ -12,11 +12,12 @@ tags:        ["signiant", "PoC"]
 #### Concept
 
 Signiant Jet can be triggered to capture live events by connecting to an Arqiva
-Live Picture Exchage Directory ([LPX]). Metarex provides automatic ETL
-(**E**xtract, **T**ransform & **L**oad) processes to allow the
-metadata from the live event to be automatically:
+Live Picture Exchage Directory ([LPX]). An event is selected and an automatic
+ETL (**E**xtract, **T**ransform & **L**oad) from {{% metarex %}} provides
+native metadata to Jet:
 
 * show descriptive & QC text in the Jet UI for display
+* potentially synthesize a live graphic / icon
 * import event metadata into Snowflake
 * embed the metadata into the essence for downstream propagation
 
