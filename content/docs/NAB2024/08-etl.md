@@ -1,7 +1,7 @@
 ---
-title:       Extract Load Transform
-linkTitle:   Extract Load Transform
-date:        2024-02-21
+title:       Extract Transform Load
+linkTitle:   Extract Transform Load
+date:        2024-03-06
 description: Auto Connector generation
 author:      Bruce Devlin
 tags:        ["tools"]

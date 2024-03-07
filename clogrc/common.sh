@@ -1,5 +1,4 @@
 # common file data for building openwebsite
-clogrc/_inc.sh
 #           common (+ link to docs)
 #      ↗     ↗       ↑      ↖       ↖
 #  check → build → test → deploy → postfix
@@ -91,15 +90,16 @@ function getRemoteTag () {
 function colourTag () {
   # color major & minor rev: Success / Error
   # color patch              Success / Warning
-  local ref tag msg
-  local e0=$cE; local e1=$cE; local e2=$cH
+  local ref tag msg opt
 
-  IFS='.' read -ra ref <<< "$1"                    # array of raef
-  IFS='.' read -ra tag <<< "$2"                    # array of tag
+  opt="-ra" && [ -n "isZSH" ] && opt="-ra"
 
-  if [[ "${ref[0]}" == "${tag[0]}" ]]; then  msg="$cS${tag[0]}";  else  msg="$e0${tag[0]}"; fi
-  if [[ "${ref[1]}" == "${tag[1]}" ]]; then msg+="$cS.${tag[1]}"; else msg+="$e1.${tag[1]}"; fi
-  if [[ "${ref[2]}" == "${tag[2]}" ]]; then msg+="$cS.${tag[2]}"; else msg+="$e2.${tag[2]}"; fi
+  IFS='.' read $opt ref <<< "$1"                    # array of raef
+  IFS='.' read $opt tag <<< "$2"                    # array of tag
+
+  if [[ "${ref[0]}" == "${tag[0]}" ]]; then  msg="$cS${tag[0]}";  else  msg="$cE${tag[0]}"; fi
+  if [[ "${ref[1]}" == "${tag[1]}" ]]; then msg+="$cS.${tag[1]}"; else msg+="$cW.${tag[1]}"; fi
+  if [[ "${ref[2]}" == "${tag[2]}" ]]; then msg+="$cS.${tag[2]}"; else msg+="$cI.${tag[2]}"; fi
 
   printf "$msg$cT"
 }

@@ -1,7 +1,7 @@
 ---
 title:       Metarex Demo
 linkTitle:   Metarex Demo
-date:        2024-02-20
+date:        2024-03-06
 description: Self Describing Metadata Tools
 author:      Bruce Devlin
 tags:        ["tools"]

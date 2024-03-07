@@ -7,7 +7,7 @@
 #   \_/\_/   \_/\_/   \_/\_/        |_|_|_| \___|  \__| \__,_| |_|   \___| /_\_\       |_|_|_| \___| \__,_| |_| \__,_|
 [ -n "$CHECK_ALREADY_SOURCED" ] && return 0
 CHECK_ALREADY_SOURCED=YES
-[ -f clogrc/_inc.sh   ] && source clogrc/_inc.sh    # helper functions
+[ -f clogrc/_inc.sh   ] && source clogrc/_inc.sh    # repo name etc.
 [ -f clogrc/common.sh ] && source clogrc/common.sh  # helper functions
 
 printf "${cC}Checking$cT Project$cS $PROJECT$cT on $cI$bCPU $bOSV$cX\n"
@@ -60,9 +60,9 @@ esac
 #print out the matching tags
 fReport "code"   "$vCodeType" "$cS" $vCODE isRef
 
-fReport "local"  "git latest"  $(colourTag $vREF $vLOCAL)
-fReport "local"  "git HEAD"    $(colourTag $vREF $vHEAD)
-fReport "remote" "git latest"  $(colourTag $vREF $vREPO)
+fReport "local"  "git latest"  $(colourTag "$vREF" "$vLOCAL")
+fReport "local"  "git HEAD"    $(colourTag "$vREF" "$vHEAD")
+fReport "remote" "git latest"  $(colourTag "$vREF" "$vREPO")
 
 # get tag from the repos & update error count from the subprocess
 for i in ${!dRepo[@]}; do

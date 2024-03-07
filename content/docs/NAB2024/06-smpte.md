@@ -1,23 +1,22 @@
 ---
-title:       Visualization
-linkTitle:   Visualization
-date:        2024-02-21
-description: No Code visualization
+title:       SMPTE RIS OSVP
+linkTitle:   SMPTE RIS OSVP
+date:        2024-03-06
+description: harmonizing On Set Virtual Production
 author:      Bruce Devlin
 tags:        ["tools"]
 ---
 
-{{% nab24-demo 7 %}}
+{{% nab24-demo 6 %}}
 
 Key points:
 
-* Sample Riedel battery status data  //  ST 2110 PTP data
+* Sample OSVP data (color, lens)
 * Web Service (metarex core) to validate documents
 * Web Service (metarex enabled) to transform formats
 * Web Service (metarex enabled) to synthesise svg ok/err icons
-* Monitor wall mockup to show status
+* Dashboard mockup to show status
 
-
-{{% include 07-demo-segment.html %}}
+{{% include 06-demo-segment.html %}}
 {{% sitelinks %}}
 {{% /nab24-demo %}}
