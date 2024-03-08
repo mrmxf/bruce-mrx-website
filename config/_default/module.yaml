@@ -5,7 +5,7 @@
 # with simplified shortcuts that are created with partials to reduce custom code.
 
 # uncomment line below for temporary local development of module
-# replacements: "github.com/mrmxf/fohuw -> ../../fohuw"
+replacements: "github.com/mrmxf/fohuw -> ../../fohuw"
 hugoVersion:
   extended: true
   min: v0.121.0

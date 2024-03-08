@@ -7,14 +7,11 @@ author:      Bruce Devlin [@in](https://www.linkedin.com/in/mrmxf/)
 tags:        ["project",  "NAB", "MrMXF"]
 ---
 
-{{< card/media
-      mediaUrl =  "featured-bruce.jpg"
-      mediaOn  =  "left"
-      widthFloat = 0.3
-      credit   =  ""
-      id       =  "bruce"
- >}}
-
+{{< f/block
+  id    = "summary"
+  src   = "featured-bruce.jpg"
+  srcOn = "left"
+>}}
 # MetaRex at NAB 2023
 
 New backers, offers to write code, offers of financial support, offers to write
@@ -28,18 +25,14 @@ spec on the [GitHub](https://github.com/metarex-media) as well as adding more
 tutorial material and references to existing standards up which {{% metarex %}}
 is based.
 
-
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-{{< card/media
-      mediaUrl =  "las vegas.jpg"
-      mediaOn  =  "right"
-      widthFloat = 0.3
-      credit   =  ""
-      id       =  "vegas"
- >}}
-
+{{< f/block
+  id       = "block2"
+  src      = "las vegas.jpg"
+  srcOn    = "right"
+  srcWidth = 0.5
+>}}
 ## Highlights
 
 As usual, the [Devoncroft
@@ -50,7 +43,8 @@ industry. For me, a key message was that data is continuing to drive business
 decisions and that trusting the provenance of that data is key to ensuring the
 decisions are good ones. This includes upstream data from the creation of the
 content as well as downstream data from the consumption of the content.
-
+{{< /f/block >}}
+{{< f/block >}}
 On the show floor there were busy clumps and quiet areas. A curious mix of
 activity all around. It seemed that anyone with cloud native solutions had a
 continuous stream of visitors whereas some of the smaller hardware sellers had
@@ -59,4 +53,4 @@ time to doom-scroll on their favourite social media.
 Next stop for Metarex is the Media Production Show in London 10-11 May. Come and
 see us, we'll [have a great
 panel(https://www.mediaproductionshow.com/2023-seminar-programme/metarex-s-fedex-metadata-simplifies-workflows)]!
-{{< /card/media >}}
+{{< /f/block >}}

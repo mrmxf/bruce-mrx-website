@@ -7,13 +7,12 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "football", "yellowbasket"]
 ---
 
-{{< card/media
-    alt=      "Katya"
-    position= "left"
-    size=     "tiny"
-    imageUrl= "featured-katya.jpg"
+{{< f/block
+  id    = "summary"
+  src   = "featured-katya.jpg"
+  srcOn = "left"
+  srcWidth = 0.2
 >}}
-
 The [FIFA] World Cup Qatar 2022 is nearly over, and the [FIFA] World Cup
 Division, which is responsible for the broadcast production, and Host Broadcast
 Services ([HBS]) produce a remarkable worldwide coverage, which include
@@ -28,17 +27,15 @@ streamlining operations and setup.
 [Fifa]: https://www.fifa.com/
 [HBS]:  https://www.hbs.tv/about-us/
 
-{{< /card/media >}}
+{{< /f/block >}}
 
 <!-- ####################################################################### -->
 
-{{< card/media
-    alt=      "football setup"
-    position= "right"
-    size=     "large"
-    imageUrl= "football-rigging.png"
+{{< f/block
+  id    = "block2"
+  src   = "football-rigging.png"
+  srcOn = "right"
 >}}
-
 For HDR (High Dynamic Range), hybrid log gamma (HLG) format is used to provide a
 standardized and easy-to-manage set of colour transformations between SDR and
 HDR. UHD/HDR capture coming from selected standard cameras at 50 fps, but
@@ -48,7 +45,10 @@ cameras. If you ask me about metadata in this setup, I would not be able to give
 you a positive answer, I am afraid that many useful metadata elements were not
 considered at all because of the difficulty of integrating the annotation /
 metadata systems with the live production systmes.
-
+{{< /f/block >}}
+{{< f/block
+  id    = "block3"
+>}}
 The standard camera plan has 42 cameras, and both super-slo-mo and ultra-slo-mo
 are in the mix, covering key players. Several RF cameras will also be used
 to capture activities — fan coverage, team arrivals, VIP and player interviews —
@@ -74,10 +74,13 @@ The lineup of feeds:
 * Action clips
 * Emotion clips
 * Permanent highlights
-
-{{< /card/media >}}
+{{< /f/block >}}
 
 <!-- ####################################################################### -->
+
+{{< f/block
+  id    = "block4"
+>}}
 
 One of the features of this year broadcasting setup has been the cloud-based
 media server, FIFA MAX (Media Asset Exchange), which allows rights holders to
@@ -92,33 +95,26 @@ time based metadata associated with the media found its way to the cloud based
 storage.  A {{% metarex %}} fire-hose of metadata might have enriched the quality,
 quantity and **searchability** of assets.
 
+{{< /f/block >}}
+
 <!-- ####################################################################### -->
 
-{{< card/media
-    alt=      "football setup"
-    position= "right"
-    size=     "full"
-    imageUrl= "feeds.png"
-/>}}
-
+{{< f/block
+  id    = "block5"
+  src   = "feeds.png"
+  srcOn = "left"
+>}}
 The same could be applied to the audio. Rights holders will have a choice of a
 basic-stereo mix, 5.1 surround-sound mix **_and also_** a **5.1.4** immersive
 mix produced in two immersive-sound galleries at the IBC. At the center of those
 efforts, an eight-capsule microphone array at each stadium is supported by
 additional three-dimensional microphone arrays located closer to the spectators.
-
-{{< card/media
-    alt=      "football spectators"
-    position= "right"
-    size=     "full"
-    imageUrl= "mobile-viewer.jpg"
-/>}}
-
-{{< card/media
-    alt=      "football spectators Morocco-Portugal match taken on Madeira island"
-    position= "right"
-    size=     "full"
-    imageUrl= "portugal-watchers.jpg"
-/>}}
-
- [backers]: /docs/project/backers/
+{{< /f/block >}}
+{{< f/image
+  src = "mobile-viewer.jpg"
+  caption = "Mobile Viewers"
+>}}
+{{< f/image
+   src = "portugal-watchers.jpg"
+   caption = "football spectators Morocco-Portugal match taken on Madeira island"
+>}}

@@ -8,17 +8,17 @@ tags:        ["project",  "IBC", "RNF", "Amber"]
 featured:    /img/amber-simi.png
 ---
 
-{{< card/media
-  mediaUrl =  "/img/amber-simi.png"
-  mediaOn  =  "left"
-  widthFloat = 0.3
-  credit   =  ""
-  id       =  "amber"
+<!-- ####################################################################### -->
+{{< f/block
+  id       = "block1"
+  src      = "/img/amber-simi.png"
+  srcOn    = "left"
+  srcLink  = "https://www.amberbardell.com"
 >}}
 <!-- markdownlint-disable MD025 -->
 # Making Rex, Insights from our Creative Team
 
-### Meet the creatives behind Rex:
+### Meet the creatives behind Rexy:
 
 **[Amber Bardell]** is a multidisciplinary creative with a passion for tactile
 art techniques. You’ll often find them painting walls, or canvas. Their trusty
@@ -37,16 +37,13 @@ ways of working can be integrated into the pipeline, making more room for the
 collaboration of our disciplines.
 
 {{< sitelinks >}}
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-{{< card/media
-      mediaUrl =  "meeja/mrx-rexy-nab-2023.mp4"
-      mediaOn  =  "right"
-      widthFloat = 0.5
-      credit   =  ""
-      id       =  "vegas"
- >}}
+{{< f/block
+  id       = "block2"
+  src      = "/meeja/mrx-rexy-nab-2023.mp4"
+  srcOn    = "right"
+>}}
 We wanted Rex to feel familiar and friendly, but with a slight edge that
 could scare other characters in her world when he gets protective of his
 metadata. The process of bringing her to life began with discussions and Amber’s
@@ -58,15 +55,13 @@ our workflow, we’ve also been using VR to model the initial shapes of 3D asset
 Rex is still a very young dinosaur, so expect to see some character development!
 
 {{< sitelinks >}}
-{{< /card/media >}}
-
-{{< card/media
-      mediaUrl =  "/img/dino/assets/agapanthus.png"
-      mediaOn  =  "left"
-      widthFloat = 0.5
-      credit   =  ""
-      id       =  "vegas"
- >}}
+{{< /f/block >}}
+<!-- ####################################################################### -->
+{{< f/block
+  id       = "block3"
+  src      = "/img/dino/assets/agapanthus.png"
+  srcOn    = "left"
+>}}
 
  For the scenery, Amber usually makes a plan of the whole scene and then gets
 stuck right into individual assets. Their illustrative style for this project
@@ -84,16 +79,13 @@ nod to the performing arts. We have married this simple approach with dynamic
 elements such as caustics and volumetric fog for more visual interest.
 
 {{< sitelinks >}}
-{{< /card/media >}}
-
-{{< card/media
-      mediaUrl =  "/img/dino/assets/cowslip.png"
-      mediaOn  =  "right"
-      widthFloat = 0.5
-      credit   =  ""
-      id       =  "vegas"
- >}}
-
+{{< /f/block >}}
+<!-- ####################################################################### -->
+{{< f/block
+  id       = "block4"
+  src      = "/img/dino/assets/cowslip.png"
+  srcOn    = "right"
+>}}
 An important part of the project is being able to extract engine data from
 Unreal and pass it on to the MetaRex software developers for testing. We first
 created a custom component that tracks any chosen point or object. This location
@@ -119,4 +111,4 @@ icon"></i> Instagram.
 [www.simizeko.com]:      http://www.simizeko.com
 [LinkedIn]:              https://uk.linkedin.com/in/amber-bardell
 
-{{< /card/media >}}
+{{< /f/block >}}

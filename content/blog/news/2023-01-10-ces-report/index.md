@@ -7,14 +7,11 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "CES", "yellowbasket"]
 ---
 
-{{< card/media
-  mediaUrl =   "featured-ces-logo.png"
-  mediaOn  =   "left"
-  widthFloat = 0.3
-  credit   =   ""
-  id       =   "CES"
+{{< f/block
+  id    = "summary"
+  src   = "featured-ces-logo.png"
+  srcOn = "left"
 >}}
-
 ### Metaverse and Metadata at CES® 2023
 
 The CES 2023 theme was a little unusual for consumer tech show, but it was up to
@@ -23,17 +20,13 @@ Challenges”**. Tech development is often associated with poor environment
 credentials or not in the long term interest of humanity, but perhaps only now
 we are entering an age where technology could help save the world in many ways
 broken by human interaction.
-{{< /card/media >}}
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
-{{< card/media
-  mediaUrl =   "koenig.png"
-  mediaOn  =   "right"
-  widthFloat = 0.3
-  credit   =   ""
-  id       =   "koenig"
+{{< f/block
+  id    = "summary"
+  src   = "koenig.png"
+  srcOn = "right"
 >}}
-
 One of the six most important tech trends nominated by Steve Koenig, VP Research
 for CTA was **Metaverse / Web3.0**.
 **[Koenig](https://www.youtube.com/watch?v=Xp3SqNVRM68)** said that we will see
@@ -45,35 +38,25 @@ business strategy. As examples he offered
 
 both of which enhance the audio-video experience we have bee used to have until
 now.
-
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
-{{< card/media
-  url =       "<https://www.vimmerse.net/>"
-  mediaUrl =  "ces-vimverse.jpg"
-  mediaOn  =  "left"
-  widthFloat = 0.3
-  credit   =  ""
-  id       =  "vimmverse"
+{{< f/block
+  id     = "vimverse"
+  src    = "ces-vimverse.jpg"
+  srcOn  = "left"
+  srcLink = "https://www.vimmerse.net/"
 >}}
-
 The show floor saw VR/AR offering – filming, delivering, reproducing
 all sorts of content – for business purposes and entertainment. There were many
 3D metadata tools including one we liked from [Vimmerse](https://www.vimmerse.net/).
 
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
-{{< card/media
-    alt =      "CES Themes"
-    position = "right"
-    size =     "small"
-    imageUrl = "ces-tech-themes.jpg"
+{{< f/block
+  id     = "block3"
+  src    = "ces-tech-themes.jpg"
+  srcOn  = "right"
 >}}
-
 The conference session also had Metaverse topics with important speakers and well
 knowing innovators such as...
 
@@ -90,15 +73,13 @@ where we met a plethora of like minded colleagues, including Leslie Shannon -
 Head of Ecosystem and Trend Scouting for Nokia based in Silicon Valley and the
 author of **[Interconnected Realities]**:
 _How the Metaverse Will Transform Our Relationship to Technology Forever_
-
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
+{{< f/block >}}
 Needless to say that engineering part of Metaverse today in term of
 standartization is much weaker than the futurist dreams about it, so here we
 are: Closing the gap. Metarex roar!
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
 
 [Interconnected Realities]: https://www.amazon.com/Interconnected-Realities-Metaverse-Relationship-Technology/dp/1394160844

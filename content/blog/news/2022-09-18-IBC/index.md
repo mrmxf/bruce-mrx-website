@@ -7,14 +7,11 @@ tags:        ["project",  "Mr MXF", "IBC", "Modulamedia"]
 description: Finding support on the show floor of IBC 2022.
 ---
 
-{{< card/media
-    mediaUrl =  "featured-ibc-2022.jpg"
-    mediaOn  =  "left"
-    widthFloat = 0.3
-    credit   =  ""
-    id       =  "mxf-live demo at ARRI"
+{{< f/block
+  id    = "summary"
+  src   = "featured-ibc-2022.jpg"
+  srcOn = "left"
 >}}
-
 An in-person IBC after the long COVID break was both exciting and busy. My 10km
 stope count goal was exceeded every day and conversations with both exhibitors and attendees was stimulating and informative.
 
@@ -24,8 +21,11 @@ discarded during productions. More folks were inventing new protocols for their
 AI metadata because there isn't a standard way to ship metadata on a timeline
 from where it's made to where it's needed.
 
-{{< /card/media >}}
+{{< /f/block >}}
 
+{{< f/block
+  id    = "block2"
+>}}
 My big take away is that if we run the {{% metarex %}} project with the
 following constraints then it is likely to be a success:
 
@@ -37,6 +37,7 @@ following constraints then it is likely to be a success:
 * Support Javascript, Python, C++ and GoLang.
 
 Check our the [backers] page to see how you can help.
+{{< /f/block >}}
 
 [DPP]:         https://www.thedpp.com/events/leaders-briefing-2022
 [NAB]:         /blog/2022/09/18/2022-09-18-ibc/

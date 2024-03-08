@@ -9,14 +9,11 @@ tags:        ["project",  "Mr MXF", "IBC"]
 
 ## NAB Show 2022
 
-{{< card/media
-    mediaUrl =  "featured-intelligent-content-icon.webp"
-    mediaOn  =  "left"
-    widthFloat = 0.3
-    credit   =  ""
-    id       =  "metarex at NAB"
+{{< f/block
+  id    = "summary"
+  src   = "featured-intelligent-content-icon.webp"
+  srcOn = "left"
 >}}
-
 [Intelligent Content](https://nabshow.com/2022/experience-whats-new/connect/)
 was a key theme of the show and the {{% metarex %}} team wandered the show floor
 expecting to find that all the problems had been solved by existing products and
@@ -27,8 +24,11 @@ traffic with streams of video and audio, but the metadata transport puzzle was
 still a piecemeal region-by-region, application-by-application, device-by-device
 tailored solution.
 
-{{< /card/media >}}
+{{< /f/block >}}
 
+{{< f/block
+  id    = "block2"
+>}}
 We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 
 * Is transporting and preserving media metadata a problem?
@@ -36,18 +36,12 @@ We proposed the {{% metarex %}} project to gauge interest Specifically we asked:
 * Would it help if there were a common timing model independent of frame rate and sample rate and timezone?
 * Would it help if you could download tools and apps from Github for free?
 * Would you be prepared to contribute to a fund to make it happen?
+{{</ f/block >}}
 
-{{< f/cards >}}
-{{< f/card
-  id =           "cardID anchors"
-  src =          "/img/dino/mrx-logo.svg"
-  srcOn =        "left"
-  srcWRatio =    0.1
-  description = "Body Text"
+{{< f/block
+  id    = "block3"
+  src   = "/img/dino/mrx-logo.svg"
+  srcOn = "left"
 >}}
-
-> The answer to all these questions was **Yes**.
-> Time to start figuring out how to make it real...
-
-{{</ f/card >}}
-{{</ f/cards >}}
+The answer to all these questions was **Yes**. Time to start figuring out how to make it real...
+{{</ f/block >}}

@@ -25,7 +25,7 @@ Metadata" which is further described in this document. As such, the framework is
 referenced in the Preface Set while the track itself is referenced in the
 Material Package (Figure 1)
 
-{{% f/image "/img/doc/mxf-live-fig-1.png" "ui centered large image" %}}
+{{% f/image "/img/doc/mxf-live-fig-1.png" "MXF Live" "ui centered large image" %}}
 
 {{% d/caption "Linkage of MXF Live DM Track in MXF Header Data" "figure" %}}
 

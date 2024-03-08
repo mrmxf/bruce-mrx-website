@@ -7,14 +7,11 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "NAB", "yellowbasket"]
 ---
 
-{{< card/media
-    mediaUrl =  "featured-katya.jpg"
-    mediaOn  =  "left"
-    widthFloat = 0.3
-    credit   =  ""
-    id       =  "katya"
+{{< f/block
+  id    = "summary"
+  src   = "featured-katya.jpg"
+  srcOn = "left"
 >}}
-
 # XR, Metaverse and Metadata at NAB 2023
 
 The unofficial theme of the Centennial NAB 2023 "Data", to be even more precise
@@ -28,10 +25,9 @@ production, XR and virtualization, the accuracy of Metadata is playing the most
 important role.
 
 {{< sitelinks >}}
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
+{{< f/block >}}
 NAB show offering the two hours of show floor tours: “**The Data, Data, Data
 Tour**” happens twice a day (10-12 and 13-15) on Monday 17 and Tuesday 18 and on
 Sunday 16 one tour from 10:30 till 12:30. Plus there's the very impressive panel
@@ -64,3 +60,4 @@ project meeting at our backer Signiant's booth on the last day of the show
 Wednesday 19. Please come to W1713 to learn about new free software and
 standardization initiative which will make your life is much easy. **Metadata
 Resource Express** is coming to NAB 2023!
+{{< /f/block >}}

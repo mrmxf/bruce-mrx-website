@@ -7,15 +7,13 @@ author:      Bruce Devlin [@in](https://www.linkedin.com/in/mrmxf/)
 tags:        ["project",  "IBC", "RNF", "Infuse"]
 ---
 
-{{< card/media
-      mediaUrl =  "featured-bruce.png"
-      mediaOn  =  "left"
-      widthFloat = 0.2
-      credit   =  ""
-      id       =  "bruce"
- >}}
-
-# MetaRex at IBC 2023 - the Responsive Narrative Factory
+<!-- ####################################################################### -->
+{{< f/block
+  id       = "block1"
+  src      = "featured-bruce.png"
+  srcOn    = "left"
+>}}
+# MetaRex at IBC 2023: Responsive Narrative Factory
 
 The **[Responsive Narrative Factory]** ([RNF](/docs/ibc2023)) is an [IBC Accelerator] project that will
 be showcased at this year's IBC show between 15 & 18 September at the RAI
@@ -29,7 +27,9 @@ can be achieved when you mix the following in a simple demonstration:
 * great content
 * customer interaction
 * IBC show guest
-
+{{< /f/block >}}
+<!-- ####################################################################### -->
+{{< f/block  >}}
 Basically **ultra-fine-grained-personalisation** becomes a relatively simple
 task if you have all the right components ready to go.
 
@@ -43,18 +43,13 @@ you can follow along and maybe even download the metarex code from our [github].
 
 [Responsive Narrative Factory]: https://show.ibc.org/accelerator-media-innovation-programme/accelerator-project-responsive-narrative-factory
 [RNF]:                          /docs/ibc2023/
-{{< /card/media >}}
-
+{{< /f/block >}}
 <!-- ####################################################################### -->
-
-{{< card/media
-      mediaUrl =  "/img/event/ibc2023-rnf-web.png"
-      mediaOn  =  "right"
-      widthFloat = 0.4
-      credit   =  ""
-      id       =  "bruce"
- >}}
-
+{{< f/block
+  id       = "block3"
+  src      = "/img/event/ibc2023-rnf-web.png"
+  srcOn    = "right"
+>}}
 The [Responsive Narrative
 Factory](https://show.ibc.org/accelerator-media-innovation-programme/accelerator-project-responsive-narrative-factory)
 will be showcased as an [IBC
@@ -62,10 +57,10 @@ Accelerator](https://show.ibc.org/accelerator-media-innovation-programme) at
 [IBC 2023](https://show.ibc.org/). Our [RNF](/docs/ibc2023/) page reveals all
 the secrets of our demonstration.
 
-{{< /card/media >}}
 
 [github]:                       https://github.com/metarex-media
 [IBC]:                          https://show.ibc.org/
 [Infuse Video]:                 https://www.infuse.video/
 [MPTS2023]:                     /blog/2023/05/04/2023-05-04-metarex-mpts-2023-may-mega-update/
 [RNF]:                          /docs/ibc2023/
+{{< /f/block >}}

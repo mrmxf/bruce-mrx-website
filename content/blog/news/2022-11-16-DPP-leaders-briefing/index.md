@@ -7,13 +7,11 @@ author:      Bruce Devlin [@mrmxf](https://twitter.com/mrmxf)
 tags:        ["project",  "Mr MXF", "ModulaMedia", "DPP"]
 ---
 
-{{< card/media
-    alt=      "mxf-live demo at ARRI"
-    position= "left"
-    size=     "medium"
-    imageUrl= "featured-dpp-leaders.jpg"
+{{< f/block
+  id    = "summary"
+  src   = "featured-dpp-leaders.jpg"
+  srcOn = "left"
 >}}
-
 The DPP Leaders briefing is one of the must-attend events of the year. A truly
 international crowd with awesome speakers and a great 2 day narrative including
 futurology, current challenges, diversity, equality, inclusivity, sustainability
@@ -32,4 +30,4 @@ Check our the [backers] page to see how you can help.
 [IBC]:         /blog/2022/04/23/metarex-at-nab-2022-in-las-vegas/
 [backers]: /docs/project/backers/
 
-{{< /card/media >}}
+{{< /f/block >}}

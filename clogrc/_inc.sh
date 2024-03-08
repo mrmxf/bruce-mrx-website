@@ -5,6 +5,6 @@
 PROJECT=www-metarex-media
 callingSCRIPT="${0##*/}"
 vCODE=$(cat data/history.yaml | grep version | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')
-vCodeType="Golang"
+vCodeType="hugo"
 bEXE="mrx-website"
 bMSG=$(cat data/history.yaml | grep note | head -1 | sed -nr "s/note: (.*)/\1/p" | xargs)

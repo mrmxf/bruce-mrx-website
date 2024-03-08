@@ -116,13 +116,13 @@ function fReport() {
   isRef=""
   [[ -n "$5" ]] && isRef="$cE<$cW--$cI--$cS--ref tag$cX"
   case "$1" in
-    "golang" | "python" | "code")   category=$(printf "${cC}%12s" "$1") ;;
-    "local")                        category=$(printf "${cI}%12s" "$1") ;;
-    "remote")                       category=$(printf "${cH}%12s" "$1") ;;
-    "github"    | "dep: github")    category=$(printf "${cS}%12s" "$1") ;;
-    "gitlab"    | "dep: github")    category=$(printf "${cW}%12s" "$1") ;;
-    "bitbucket" | "dep: bitbucket") category=$(printf "${cF}%12s" "$1") ;;
-    *)                              category=$(printf "${cT}%12s" "$1") ;;
+    "golang"|"python"|"code"|"hugo") category=$(printf "${cC}%12s" "$1") ;;
+    "local")                         category=$(printf "${cI}%12s" "$1") ;;
+    "remote")                        category=$(printf "${cH}%12s" "$1") ;;
+    "github"    | "dep: github")     category=$(printf "${cS}%12s" "$1") ;;
+    "gitlab"    | "dep: github")     category=$(printf "${cW}%12s" "$1") ;;
+    "bitbucket" | "dep: bitbucket")  category=$(printf "${cF}%12s" "$1") ;;
+    *)                               category=$(printf "${cT}%12s" "$1") ;;
   esac
   msg=$(printf "$cT %17s" "$2")
   printf "${category} $msg $3$4 $isRef$cX\n"

@@ -7,11 +7,10 @@ author:      Ekaterina Petoukhova [@in](https://www.linkedin.com/in/ekaterina-pe
 tags:        ["project",  "CES", "yellowbasket"]
 ---
 
-{{< card/media
-    alt=      "Katya"
-    position= "left"
-    size=     "tiny"
-    imageUrl= "featured-ces-2023.jpg"
+{{< f/block
+    id    = "summary"
+    src   = "featured-ces-2023.jpg"
+    srcOn = "left"
 >}}
 
 **CES® 2023** will take place in **Las-Vegas, Nevada** 5-8 of January and
@@ -31,10 +30,8 @@ CES features every aspect of the tech sector.
  challenging for us to stay focused and not to be distracted by all the toys on
  show.
 
-{{< /card/media>}}
-
-<!-- ####################################################################### -->
-
+{{< /f/block>}}
+{{< f/block>}}
 Beside the Expo itself it will be also important Keynotes, for example [Dr. Lisa
 Su](https://www.youtube.com/live/sRXVRgMF2lc?feature=share&t=887) from AMD and
 other interesting Conference presentation.
@@ -77,3 +74,4 @@ other social media.
 
 [blog]:     /blog                    "Blog"
 [backers]:  /docs/project/backers/   "Backers"
+{{< /f/block>}}
