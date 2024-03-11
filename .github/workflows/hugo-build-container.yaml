@@ -149,7 +149,7 @@ jobs:
               echo "Deploying website version ($vCODE)"
               echo "vCODE=$vCODE" >> $GITHUB_ENV
               echo "website version is: $vCode"
-              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
+              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:$vCODE"
               ls -al ./public
               echo "--- Dockerfile -------------------------------------------"
               cat Dockerfile
@@ -160,5 +160,5 @@ jobs:
           # important that we use path context otherwise no output!
           context:   .
           push:      true
-          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
+          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:$vCODE"
           platforms: linux/amd64,linux/arm64
