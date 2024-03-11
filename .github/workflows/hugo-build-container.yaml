@@ -103,6 +103,10 @@ jobs:
               echo "pushing website version $vCODE"
               echo "vCODE=$vCODE"  >>   $GITHUB_ENV
       -
+        name: Check website version persists
+        run: |
+              echo "website version check is $vCODE"
+      -
         name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -138,11 +142,12 @@ jobs:
           name:   www-metarex-media
 
       -
-        name: List the ./public folder
+        name: Check website
         run: |
+              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
               ls -al ./public
               cat Dockerfile
-              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
+              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
 
       -
         name: Build and push
