@@ -101,7 +101,7 @@ jobs:
         run: |
               vCODE=$(cat data/history.yaml | grep version | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')
               echo "pushing website version $vCODE"
-              echo "vCODE=$vCODE"  >>   $GITHUB_ENV
+              printf "$vCODE"  > www-version.txt
       -
         name: Check website version persists
         run: |
@@ -114,6 +114,7 @@ jobs:
           path: |
                 ./public
                 Dockerfile
+                www-version.txt
           if-no-files-found: error
           retention-days:    1
 
@@ -142,16 +143,15 @@ jobs:
           name:   www-metarex-media
 
       -
-        name: Check website
+        name: Check website & set version
         run: |
-              vCODE2=$(cat data/history.yaml | grep version | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')
-              echo "recomputing vCODE Gives $vCODE2"
+              vCODE=$(cat www-version.txt)
+              echo "vCODE=$vCODE" >> $GITHUB_ENV
               echo "env is: ${{ env }}"
               echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
               ls -al ./public
+              echo "--- Dockerfile -------------------------------------------"
               cat Dockerfile
-              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
-
       -
         name: Build and push
         uses: docker/build-push-action@v5
