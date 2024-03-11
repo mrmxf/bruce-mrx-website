@@ -142,7 +142,7 @@ jobs:
         run: |
               ls -al ./public
               cat Dockerfile
-              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:$vCODE"
+              echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
 
       -
         name: Build and push
@@ -151,5 +151,5 @@ jobs:
           # important that we use path context otherwise no output!
           context:   .
           push:      true
-          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:$vCODE
+          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
           platforms: linux/amd64,linux/arm64
