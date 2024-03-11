@@ -101,7 +101,7 @@ jobs:
         run: |
               vCODE=$(cat data/history.yaml | grep version | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')
               echo "pushing website version $vCODE"
-              printf "$vCODE"  > www-version.txt
+              echo "$vCODE"  > www-version.txt
       -
         name: Check website version persists
         run: |
@@ -146,8 +146,9 @@ jobs:
         name: Check website & set version
         run: |
               vCODE=$(cat www-version.txt)
+              echo "Deploying website version ($vCODE)"
               echo "vCODE=$vCODE" >> $GITHUB_ENV
-              echo "env is: ${{ env }}"
+              echo "website version is: $vCode"
               echo "pushing to hub: ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.build.vCODE }}"
               ls -al ./public
               echo "--- Dockerfile -------------------------------------------"
