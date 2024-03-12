@@ -114,7 +114,7 @@ jobs:
           path: |
                 ./public
                 Dockerfile
-                www-version.txt
+                job-chain.sh
           if-no-files-found: error
           retention-days:    1
 
