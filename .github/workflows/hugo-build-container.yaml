@@ -101,7 +101,7 @@ jobs:
         run: |
               vCODE=$(cat data/history.yaml | grep version | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')
               echo "pushing website version $vCODE"
-              echo "$vCODE"  > www-version.txt
+              echo "export vCODE=$vCODE"  >> job-chain.sh
       -
         name: Check website version persists
         run: |
@@ -145,7 +145,7 @@ jobs:
       -
         name: Check website & set version
         run: |
-              vCODE=$(cat www-version.txt)
+              source job-chain.sh
               echo "Deploying website version ($vCODE)"
               echo "vCODE=$vCODE" >> $GITHUB_ENV
               echo "website version is: $vCode"
@@ -154,11 +154,21 @@ jobs:
               echo "--- Dockerfile -------------------------------------------"
               cat Dockerfile
       -
+        name: Check env visibility
+        run: |
+              echo "BEFORE source     vCode=($vCODE)"
+              echo "BEFORE source env.vCode=($env.vCODE)"
+              source job-chain.sh
+              echo " AFTER source     vCode=($vCODE)"
+              echo " AFTER source env.vCode=($env.vCODE)"
+      -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
           # important that we use path context otherwise no output!
           context:   .
           push:      true
-          tags:      ${{ env.REPO  }}/${{ env.IMAGE  }}:$vCODE"
+          tags: |
+                ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
+                type=semver,pattern={{version}}
           platforms: linux/amd64,linux/arm64
