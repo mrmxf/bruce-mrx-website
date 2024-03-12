@@ -169,6 +169,6 @@ jobs:
           context:   .
           push:      true
           tags: |
-                ${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
-                type=semver,pattern={{version}}
+                "${{ env.REPO  }}/${{ env.IMAGE  }}:${{ env.vCODE }}"
+                "type=semver,pattern={{version}}"
           platforms: linux/amd64,linux/arm64
