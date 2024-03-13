@@ -41,16 +41,16 @@ jobs:
       - name: Bark some context vairables
         run: |
           printf "GitHub workflow\n"
-          printf "Hub: %19s  %s" "whoami\n"               "$(whoami)"
-          printf "Hub: %19s  %s" "pwd\n"                  "$(pwd)"
-          printf "Hub: %19s  %s" "PATH\n"                 "$PATH"
-          printf "Hub: %19s  %s" "github.actor\n"         "${{ github.actor }}"
-          printf "Hub: %19s  %s" "github.ref\n"           "${{ github.ref }}"
-          printf "Hub: %19s  %s" "github.head_ref\n"      "${{ github.head_ref }}"
-          printf "Hub: %19s  %s" "github.repository\n"    "${{ github.repository }}"
-          printf "Hub: %19s  %s" "github.workspace\n"     "${{ github.workspace }}"
-          printf "Hub: %19s  %s" "github.server_url\n"    "${{ github.server_url }}"
-          printf "Hub: %19s  %s" "runner.temp\n"          "${{ runner.temp }}"
+          printf "Hub: %19s  %s\n" "whoami"               "$(whoami)"
+          printf "Hub: %19s  %s\n" "pwd"                  "$(pwd)"
+          printf "Hub: %19s  %s\n" "PATH"                 "$PATH"
+          printf "Hub: %19s  %s\n" "github.actor"         "${{ github.actor }}"
+          printf "Hub: %19s  %s\n" "github.ref"           "${{ github.ref }}"
+          printf "Hub: %19s  %s\n" "github.head_ref"      "${{ github.head_ref }}"
+          printf "Hub: %19s  %s\n" "github.repository"    "${{ github.repository }}"
+          printf "Hub: %19s  %s\n" "github.workspace"     "${{ github.workspace }}"
+          printf "Hub: %19s  %s\n" "github.server_url"    "${{ github.server_url }}"
+          printf "Hub: %19s  %s\n" "runner.temp"          "${{ runner.temp }}"
           echo ""
 
   # Build job
@@ -59,7 +59,9 @@ jobs:
     needs: bark
     env:
       HUGO_VERSION: 0.123.2
-      BASE_URL: "https://staging.metarex.media/"
+      # don't force a BASE_URL so that a container works for both
+      # https://test.xxx/ and https://xxx/
+      BASE_URL: "/"
     steps:
       -
         name: Checkout
@@ -84,7 +86,12 @@ jobs:
         run: sudo snap install dart-sass
       -
         name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: |
+          if "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] ; then
+            npm ci  || true
+          else
+            npm i || true
+          fi
       -
         name: Build with Hugo
         env:
