@@ -1,6 +1,6 @@
 baseURL: "/"
-title: "metarex.media"
-theme: fohuw
+title:   "metarex.media"
+theme:   "fohuw"
 
 # Language settings
 contentDir: "content"

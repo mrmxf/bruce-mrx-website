@@ -7,8 +7,8 @@ Load yaml from data/nab2024 and use the `demo` object to render the cards
 {{ range collections.Index $.Site.Data.nab2024.demo }}
 <div class="card">
   {{/* --- image / video --------------------------------------------------*/}}
-  <div class="image" style="background-color:#AAAAAA;">
-    <img src="{{ .imageUrl }}" />
+  <div class="middle aligned image" style="background-color:#CCCCCC;">
+    <img class="middle aligned" src="{{ .imageUrl }}" />
   </div>
   {{/* --- content of card ------------------------------------------------*/}}
   <div class="attached content">

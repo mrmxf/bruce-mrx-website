@@ -108,6 +108,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          mkdir -p themes/fohuw
           hugo \
             --gc \
             --minify \
