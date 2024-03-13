@@ -87,11 +87,20 @@ jobs:
       -
         name: Install Node.js dependencies
         run: |
-          if "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] ; then
+          if [[ -f package-lock.json || -f npm-shrinkwrap.json ]] ; then
             npm ci  || true
           else
             npm i || true
           fi
+      -
+        name: Setup ENV
+        id:   setup_env
+        run: |
+          BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          # preserve BRANCH for other steps
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          # preserve BRANCH for dependent jobs
+          echo "export BRANCH=$BRANCH"  >> job-chain.sh
       -
         name: Build with Hugo
         env:
